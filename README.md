@@ -1,5 +1,7 @@
 # Kadane's Algorithm, Derived in Lean 4
 
+[![Build](https://github.com/satnam6502/bird-meertens/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/satnam6502/bird-meertens/actions/workflows/build.yml)
+
 Give me a list of integers and ask for the contiguous segment with the largest
 sum, and the obvious thing to do is to try every segment, add each one up, and
 keep the biggest. For `[-2, 1, -3, 4, -1, 2, 1, -5, 4]` the winner is
