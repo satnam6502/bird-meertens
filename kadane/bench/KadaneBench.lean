@@ -5,8 +5,9 @@ import Kadane
 
 Every line of the `calc` block in `mss_eq_kadane` is a program. This executable
 times each line on random lists of growing length. It writes the timings to
-`bench/kadane_timings.csv`. It plots them in `bench/kadane_timings_light.svg`
-and `bench/kadane_timings_dark.svg`. Run it from the root of the repository:
+`kadane/bench/kadane_timings.csv`. It plots them in
+`kadane/bench/kadane_timings_light.svg` and
+`kadane/bench/kadane_timings_dark.svg`. Run it from the root of the repository:
 
     lake exe kadane_bench        # a line stops once one call takes over 500 ms
     lake exe kadane_bench 50     # a quick run, stopping at 50 ms
@@ -366,6 +367,9 @@ def svg (th : Theme) (ls : Array Line) (rows : Array Row) (slopes : Array (Optio
 
 /-! ## Main -/
 
+/-- Where the timings and plots go, relative to the root of the repository. -/
+def outDir : String := "kadane/bench"
+
 def main (args : List String) : IO UInt32 := do
   let budgetMs := (args.head? >>= String.toNat?).getD 500
   let budget := budgetMs.toFloat / 1000
@@ -389,14 +393,14 @@ def main (args : List String) : IO UInt32 := do
         IO.println s!"{(toString n).pushn ' ' (9 - (toString n).length)}{i + 1} {ls[i]!.law}: {fmtTime t}"
         if t > budget then active := active.set! i false
   let slopes := (List.range ls.size).toArray.map fun i => slope (fitPoints rows i)
-  IO.FS.createDirAll "bench"
+  IO.FS.createDirAll outDir
   let mut csv := "step,law,line,cost,n,nanoseconds\n"
   for r in rows do
     let l := ls[r.step]!
     csv := csv ++ s!"{r.step + 1},\"{l.law}\",\"{l.expr}\",{cost l.degree},{r.n},{fixed 1 (r.seconds * 1e9)}\n"
-  IO.FS.writeFile "bench/kadane_timings.csv" csv
-  IO.FS.writeFile "bench/kadane_timings_light.svg" (svg light ls rows slopes budgetMs)
-  IO.FS.writeFile "bench/kadane_timings_dark.svg" (svg dark ls rows slopes budgetMs)
+  IO.FS.writeFile s!"{outDir}/kadane_timings.csv" csv
+  IO.FS.writeFile s!"{outDir}/kadane_timings_light.svg" (svg light ls rows slopes budgetMs)
+  IO.FS.writeFile s!"{outDir}/kadane_timings_dark.svg" (svg dark ls rows slopes budgetMs)
   -- A summary table, in Markdown, for the README.
   IO.println "\n| Step | Law | Bird's cost | Measured slope | n = 512 | Largest n | Time there |"
   IO.println "|---|---|---|---|---|---|---|"
