@@ -1,5 +1,9 @@
 # Kadane's Algorithm, Derived in Lean 4
 
+This page describes the systematic derivation of an efficient algorithm from a specification-like inefficient algorithm in a systematic manner using proved correct formal transformations, as illustrated in the code below.
+
+![kadane.png](kadane.png)
+
 Give me a list of integers and ask for the contiguous segment with the largest
 sum, and the obvious thing to do is to try every segment, add each one up, and
 keep the biggest. For `[-2, 1, -3, 4, -1, 2, 1, -5, 4]` the winner is
