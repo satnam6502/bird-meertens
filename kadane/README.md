@@ -1,6 +1,6 @@
 # Kadane's Algorithm, Derived in Lean 4
 
-This page describes the systematic derivation of an efficient algorithm from a specification-like inefficient algorithm using proved correct formal transformations, as illustrated in the code below (from [`Kadane.lean`](Kadane.lean)).
+This page describes the systematic derivation of an efficient algorithm from an obviously correct but inefficient specification using formally verified transformations, as illustrated in the code below (from [`Kadane.lean`](Kadane.lean)).
 
 ![The Lean theorem mss_eq_kadane: a calc block that rewrites the O(n³) specification maxL ∘ map sum ∘ segs, one named law per line, into Kadane's O(n) algorithm Prod.fst ∘ foldl (· ⊗ ·) (0, 0).](kadane.png)
 
