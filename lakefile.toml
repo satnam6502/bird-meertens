@@ -9,4 +9,4 @@ srcDir = "kadane"
 [[lean_exe]]
 name = "kadane_bench"
 root = "KadaneBench"
-srcDir = "bench"
+srcDir = "kadane/bench"
