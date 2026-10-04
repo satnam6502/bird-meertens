@@ -1,4 +1,4 @@
-# Kadane's Algorithm, Derived in Lean 4
+# Deriving Programs From Specifications in Lean 4 in the style of Bird-Meertens
 
 This page describes the systematic derivation of an efficient algorithm from an obviously correct but inefficient specification using formally verified transformations, as illustrated in the code below (from [`Kadane.lean`](Kadane.lean)). With the recent advances in AI coding agents and the automation of proofs using AI theorem provers, this inspiring idea from the 1980s deserves another look.
 
@@ -130,12 +130,6 @@ plots (a light one and a dark one, picked to match your GitHub theme).
 This approach of deriving programs from specifications was a great idea from the 1980s which was perhaps ahead of its time but I think has now found relevance in the age of AI coding. Specifically, AI coding agents and AI theorem provers can now work to synthesize and optimize code from specifications or draft implementations into efficient and correct by construction code (the guarantee comes from the checked proofs, not from the agent).
 
 Previously the level of skill required and the laborious details needed to perform the proofs for practical programs made this approach difficult to apply. Now AI coding and automatic AI theorem proving advances mean we should look again at this approach for synthesizing code in a manner that still retains some form of comprehension for humans, given by the stepwise refinement steps which act as a kind of explanation of how code has been transformed and synthesized.
-
-## What You Have to Trust
-
-Both `mss_eq_kadane` and `lines_eq_mss` depend only on Lean's standard axioms
-`propext` and `Quot.sound`. Bird's example and the all-negative case are
-checked by `decide` at the bottom of [`Kadane.lean`](Kadane.lean).
 
 ## Finding out more and some other related work
 
