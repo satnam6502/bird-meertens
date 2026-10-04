@@ -1,0 +1,12 @@
+name = "bird-meertens"
+version = "0.1.0"
+defaultTargets = ["Kadane"]
+
+[[lean_lib]]
+name = "Kadane"
+srcDir = "kadane"
+
+[[lean_exe]]
+name = "kadane_bench"
+root = "KadaneBench"
+srcDir = "bench"

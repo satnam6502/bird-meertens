@@ -1,0 +1,149 @@
+step,law,line,cost,n,nanoseconds
+1,"specification","maxL ∘ map sum ∘ segs",O(n³),8,3504.9
+2,"definition of segs","maxL ∘ map sum ∘ concat ∘ map tails ∘ inits",O(n³),8,3496.4
+3,"map promotion","maxL ∘ concat ∘ map (map sum) ∘ map tails ∘ inits",O(n³),8,3555.4
+4,"fold promotion","maxL ∘ map maxL ∘ map (map sum) ∘ map tails ∘ inits",O(n³),8,3228.9
+5,"map distributivity","maxL ∘ map (maxL ∘ map sum ∘ tails) ∘ inits",O(n³),8,3210.8
+6,"Horner's rule","maxL ∘ map (foldl (⊙) 0) ∘ inits",O(n²),8,668.4
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),8,235.0
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),8,62.3
+1,"specification","maxL ∘ map sum ∘ segs",O(n³),11,6369.4
+2,"definition of segs","maxL ∘ map sum ∘ concat ∘ map tails ∘ inits",O(n³),11,6380.1
+3,"map promotion","maxL ∘ concat ∘ map (map sum) ∘ map tails ∘ inits",O(n³),11,6466.8
+4,"fold promotion","maxL ∘ map maxL ∘ map (map sum) ∘ map tails ∘ inits",O(n³),11,5828.5
+5,"map distributivity","maxL ∘ map (maxL ∘ map sum ∘ tails) ∘ inits",O(n³),11,5807.5
+6,"Horner's rule","maxL ∘ map (foldl (⊙) 0) ∘ inits",O(n²),11,1100.4
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),11,302.9
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),11,75.3
+1,"specification","maxL ∘ map sum ∘ segs",O(n³),16,14579.7
+2,"definition of segs","maxL ∘ map sum ∘ concat ∘ map tails ∘ inits",O(n³),16,14564.0
+3,"map promotion","maxL ∘ concat ∘ map (map sum) ∘ map tails ∘ inits",O(n³),16,14247.7
+4,"fold promotion","maxL ∘ map maxL ∘ map (map sum) ∘ map tails ∘ inits",O(n³),16,12860.6
+5,"map distributivity","maxL ∘ map (maxL ∘ map sum ∘ tails) ∘ inits",O(n³),16,12445.4
+6,"Horner's rule","maxL ∘ map (foldl (⊙) 0) ∘ inits",O(n²),16,2133.4
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),16,490.7
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),16,96.3
+1,"specification","maxL ∘ map sum ∘ segs",O(n³),23,31569.2
+2,"definition of segs","maxL ∘ map sum ∘ concat ∘ map tails ∘ inits",O(n³),23,31674.8
+3,"map promotion","maxL ∘ concat ∘ map (map sum) ∘ map tails ∘ inits",O(n³),23,31031.4
+4,"fold promotion","maxL ∘ map maxL ∘ map (map sum) ∘ map tails ∘ inits",O(n³),23,28017.9
+5,"map distributivity","maxL ∘ map (maxL ∘ map sum ∘ tails) ∘ inits",O(n³),23,28119.0
+6,"Horner's rule","maxL ∘ map (foldl (⊙) 0) ∘ inits",O(n²),23,4556.6
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),23,707.1
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),23,126.6
+1,"specification","maxL ∘ map sum ∘ segs",O(n³),32,69912.3
+2,"definition of segs","maxL ∘ map sum ∘ concat ∘ map tails ∘ inits",O(n³),32,69514.0
+3,"map promotion","maxL ∘ concat ∘ map (map sum) ∘ map tails ∘ inits",O(n³),32,68611.4
+4,"fold promotion","maxL ∘ map maxL ∘ map (map sum) ∘ map tails ∘ inits",O(n³),32,62859.1
+5,"map distributivity","maxL ∘ map (maxL ∘ map sum ∘ tails) ∘ inits",O(n³),32,62948.0
+6,"Horner's rule","maxL ∘ map (foldl (⊙) 0) ∘ inits",O(n²),32,8575.6
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),32,1003.9
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),32,167.4
+1,"specification","maxL ∘ map sum ∘ segs",O(n³),45,169941.2
+2,"definition of segs","maxL ∘ map sum ∘ concat ∘ map tails ∘ inits",O(n³),45,170031.2
+3,"map promotion","maxL ∘ concat ∘ map (map sum) ∘ map tails ∘ inits",O(n³),45,168477.8
+4,"fold promotion","maxL ∘ map maxL ∘ map (map sum) ∘ map tails ∘ inits",O(n³),45,155897.4
+5,"map distributivity","maxL ∘ map (maxL ∘ map sum ∘ tails) ∘ inits",O(n³),45,153879.7
+6,"Horner's rule","maxL ∘ map (foldl (⊙) 0) ∘ inits",O(n²),45,18240.5
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),45,1426.8
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),45,221.2
+1,"specification","maxL ∘ map sum ∘ segs",O(n³),64,416793.4
+2,"definition of segs","maxL ∘ map sum ∘ concat ∘ map tails ∘ inits",O(n³),64,417366.0
+3,"map promotion","maxL ∘ concat ∘ map (map sum) ∘ map tails ∘ inits",O(n³),64,424450.2
+4,"fold promotion","maxL ∘ map maxL ∘ map (map sum) ∘ map tails ∘ inits",O(n³),64,398053.4
+5,"map distributivity","maxL ∘ map (maxL ∘ map sum ∘ tails) ∘ inits",O(n³),64,384774.2
+6,"Horner's rule","maxL ∘ map (foldl (⊙) 0) ∘ inits",O(n²),64,36700.9
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),64,2018.1
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),64,313.5
+1,"specification","maxL ∘ map sum ∘ segs",O(n³),91,1087682.8
+2,"definition of segs","maxL ∘ map sum ∘ concat ∘ map tails ∘ inits",O(n³),91,1092607.0
+3,"map promotion","maxL ∘ concat ∘ map (map sum) ∘ map tails ∘ inits",O(n³),91,1104033.8
+4,"fold promotion","maxL ∘ map maxL ∘ map (map sum) ∘ map tails ∘ inits",O(n³),91,1045080.3
+5,"map distributivity","maxL ∘ map (maxL ∘ map sum ∘ tails) ∘ inits",O(n³),91,1021633.8
+6,"Horner's rule","maxL ∘ map (foldl (⊙) 0) ∘ inits",O(n²),91,75884.5
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),91,2834.4
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),91,432.2
+1,"specification","maxL ∘ map sum ∘ segs",O(n³),128,2858239.5
+2,"definition of segs","maxL ∘ map sum ∘ concat ∘ map tails ∘ inits",O(n³),128,2860592.0
+3,"map promotion","maxL ∘ concat ∘ map (map sum) ∘ map tails ∘ inits",O(n³),128,2894914.3
+4,"fold promotion","maxL ∘ map maxL ∘ map (map sum) ∘ map tails ∘ inits",O(n³),128,2756225.5
+5,"map distributivity","maxL ∘ map (maxL ∘ map sum ∘ tails) ∘ inits",O(n³),128,2726331.8
+6,"Horner's rule","maxL ∘ map (foldl (⊙) 0) ∘ inits",O(n²),128,151234.4
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),128,4079.5
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),128,616.4
+1,"specification","maxL ∘ map sum ∘ segs",O(n³),181,8921164.8
+2,"definition of segs","maxL ∘ map sum ∘ concat ∘ map tails ∘ inits",O(n³),181,8938228.3
+3,"map promotion","maxL ∘ concat ∘ map (map sum) ∘ map tails ∘ inits",O(n³),181,8668932.0
+4,"fold promotion","maxL ∘ map maxL ∘ map (map sum) ∘ map tails ∘ inits",O(n³),181,8531456.3
+5,"map distributivity","maxL ∘ map (maxL ∘ map sum ∘ tails) ∘ inits",O(n³),181,8442328.3
+6,"Horner's rule","maxL ∘ map (foldl (⊙) 0) ∘ inits",O(n²),181,303596.2
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),181,5725.7
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),181,896.2
+1,"specification","maxL ∘ map sum ∘ segs",O(n³),256,29365527.0
+2,"definition of segs","maxL ∘ map sum ∘ concat ∘ map tails ∘ inits",O(n³),256,29436134.0
+3,"map promotion","maxL ∘ concat ∘ map (map sum) ∘ map tails ∘ inits",O(n³),256,28999480.0
+4,"fold promotion","maxL ∘ map maxL ∘ map (map sum) ∘ map tails ∘ inits",O(n³),256,28420972.0
+5,"map distributivity","maxL ∘ map (maxL ∘ map sum ∘ tails) ∘ inits",O(n³),256,28102510.0
+6,"Horner's rule","maxL ∘ map (foldl (⊙) 0) ∘ inits",O(n²),256,621476.3
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),256,8076.6
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),256,1237.9
+1,"specification","maxL ∘ map sum ∘ segs",O(n³),362,91242558.0
+2,"definition of segs","maxL ∘ map sum ∘ concat ∘ map tails ∘ inits",O(n³),362,91280404.0
+3,"map promotion","maxL ∘ concat ∘ map (map sum) ∘ map tails ∘ inits",O(n³),362,89838979.0
+4,"fold promotion","maxL ∘ map maxL ∘ map (map sum) ∘ map tails ∘ inits",O(n³),362,88816157.0
+5,"map distributivity","maxL ∘ map (maxL ∘ map sum ∘ tails) ∘ inits",O(n³),362,87861784.0
+6,"Horner's rule","maxL ∘ map (foldl (⊙) 0) ∘ inits",O(n²),362,1590247.0
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),362,11531.2
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),362,1706.3
+1,"specification","maxL ∘ map sum ∘ segs",O(n³),512,271244300.0
+2,"definition of segs","maxL ∘ map sum ∘ concat ∘ map tails ∘ inits",O(n³),512,270475611.0
+3,"map promotion","maxL ∘ concat ∘ map (map sum) ∘ map tails ∘ inits",O(n³),512,268144423.0
+4,"fold promotion","maxL ∘ map maxL ∘ map (map sum) ∘ map tails ∘ inits",O(n³),512,265682419.0
+5,"map distributivity","maxL ∘ map (maxL ∘ map sum ∘ tails) ∘ inits",O(n³),512,264853471.0
+6,"Horner's rule","maxL ∘ map (foldl (⊙) 0) ∘ inits",O(n²),512,3392241.0
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),512,16543.0
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),512,2420.1
+1,"specification","maxL ∘ map sum ∘ segs",O(n³),724,806965721.0
+2,"definition of segs","maxL ∘ map sum ∘ concat ∘ map tails ∘ inits",O(n³),724,806715059.0
+3,"map promotion","maxL ∘ concat ∘ map (map sum) ∘ map tails ∘ inits",O(n³),724,802545220.0
+4,"fold promotion","maxL ∘ map maxL ∘ map (map sum) ∘ map tails ∘ inits",O(n³),724,799121367.0
+5,"map distributivity","maxL ∘ map (maxL ∘ map sum ∘ tails) ∘ inits",O(n³),724,795518800.0
+6,"Horner's rule","maxL ∘ map (foldl (⊙) 0) ∘ inits",O(n²),724,6704681.8
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),724,23540.2
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),724,3305.8
+6,"Horner's rule","maxL ∘ map (foldl (⊙) 0) ∘ inits",O(n²),1024,12379283.0
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),1024,33783.2
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),1024,4633.0
+6,"Horner's rule","maxL ∘ map (foldl (⊙) 0) ∘ inits",O(n²),1448,24196932.0
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),1448,47443.8
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),1448,6901.2
+6,"Horner's rule","maxL ∘ map (foldl (⊙) 0) ∘ inits",O(n²),2048,48768687.0
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),2048,67879.7
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),2048,9830.7
+6,"Horner's rule","maxL ∘ map (foldl (⊙) 0) ∘ inits",O(n²),2896,95890855.0
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),2896,96625.5
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),2896,14817.8
+6,"Horner's rule","maxL ∘ map (foldl (⊙) 0) ∘ inits",O(n²),4096,198146183.0
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),4096,136390.0
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),4096,20531.5
+6,"Horner's rule","maxL ∘ map (foldl (⊙) 0) ∘ inits",O(n²),5793,611398411.0
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),5793,197332.1
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),5793,29114.2
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),8192,279317.7
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),8192,41171.6
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),11585,399818.9
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),11585,58298.9
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),16384,569865.9
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),16384,81055.9
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),23170,785119.4
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),23170,113109.9
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),32768,1103553.7
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),32768,168370.2
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),46341,1549379.2
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),46341,249960.0
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),65536,2183199.0
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),65536,358979.8
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),92682,3097798.4
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),92682,484521.5
+7,"scan lemma","maxL ∘ scanl (⊙) 0",O(n),131072,4393333.8
+8,"fold–scan fusion","fst ∘ foldl (⊗) (0, 0)",O(n),131072,661463.6
