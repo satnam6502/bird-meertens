@@ -127,7 +127,7 @@ plots (a light one and a dark one, picked to match your GitHub theme).
 
 ## AI Coding and AI Proofs
 
-This approach of deriving programs from specifications was a great idea from the 80s which was perhaps ahead of its time but I think has now found relevance in the age of AI coding. Specifically, AI coding agents and AI theorem provers can now work to synthesize and optimize code from specifications or draft implementations into efficient and correct by construction code (the guarantee comes from the checked proofs, not from the agent).
+This approach of deriving programs from specifications was a great idea from the 1980s which was perhaps ahead of its time but I think has now found relevance in the age of AI coding. Specifically, AI coding agents and AI theorem provers can now work to synthesize and optimize code from specifications or draft implementations into efficient and correct by construction code (the guarantee comes from the checked proofs, not from the agent).
 
 Previously the level of skill required and the laborious details needed to perform the proofs for practical programs made this approach difficult to apply. Now AI coding and automatic AI theorem proving advances mean we should look again at this approach for synthesizing code in a manner that still retains some form of comprehension for humans, given by the stepwise refinement steps which act as a kind of explanation of how code has been transformed and synthesized.
 
