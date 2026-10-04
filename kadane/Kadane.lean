@@ -194,5 +194,10 @@ example : mss [-2, 1, -3, 4, -1, 2, 1, -5, 4] = 6 := by decide +kernel
 example : kadane [-2, 1, -3, 4, -1, 2, 1, -5, 4] = 6 := by decide
 -- All negative: the empty segment wins.
 example : kadane [-3, -1, -2] = 0 := by decide
+-- The empty list has only the empty segment. One element is its own best.
+example : mss [] = 0 := by decide
+example : kadane [] = 0 := by decide
+example : mss [5] = 5 := by decide
+example : kadane [5] = 5 := by decide
 
 end BirdMeertens

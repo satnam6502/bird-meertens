@@ -1,0 +1,22 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      # Installs the toolchain pinned in lean-toolchain, then checks the
+      # derivation and compiles the benchmark (and so lines_eq_mss).
+      - name: Build
+        uses: leanprover/lean-action@v1
+        with:
+          build-args: Kadane kadane_bench

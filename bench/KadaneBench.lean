@@ -103,12 +103,19 @@ reads instead of letting the compiler move it. -/
 @[noinline] def runOnce (f : List Int → Int) (xs : List Int) : IO Int :=
   pure (f xs)
 
+/-- `xs` itself, since `i` never gets that big. It is `noinline`, so the
+compiler cannot see that, and the input of each call depends on the loop
+counter. Then no compiler can hoist `f xs` out of the loop, or share one call
+between iterations. -/
+@[noinline] def perturb (i : Nat) (xs : List Int) : List Int :=
+  if i == 0xFFFFFFFFFFFF then [] else xs
+
 /-- Run `f xs` `reps` times. Returns the seconds taken and the answer. -/
 def batch (f : List Int → Int) (xs : List Int) (reps : Nat) : IO (Float × Int) := do
   let t₀ ← IO.monoNanosNow
   let mut r : Int := 0
-  for _ in [0:reps] do
-    r ← runOnce f xs
+  for i in [0:reps] do
+    r ← runOnce f (perturb i xs)
   let t₁ ← IO.monoNanosNow
   return ((t₁ - t₀).toFloat / 1e9, r)
 
@@ -182,8 +189,10 @@ def esc (s : String) : String :=
 
 /-! ## Fitting -/
 
-/-- The least-squares slope of `log t` against `log n`. -/
-def slope (pts : Array (Nat × Float)) : Float :=
+/-- The least-squares slope of `log t` against `log n`. There is none for
+fewer than two points. -/
+def slope (pts : Array (Nat × Float)) : Option Float :=
+  if pts.size < 2 then none else
   let xs := pts.map fun p => Float.log p.1.toFloat
   let ys := pts.map fun p => Float.log p.2
   let k := pts.size.toFloat
@@ -191,14 +200,18 @@ def slope (pts : Array (Nat × Float)) : Float :=
   let my := ys.foldl (· + ·) 0 / k
   let sxy := (xs.zip ys).foldl (fun s (x, y) => s + (x - mx) * (y - my)) 0
   let sxx := xs.foldl (fun s x => s + (x - mx) * (x - mx)) 0
-  sxy / sxx
+  some (sxy / sxx)
 
 /-- The points a slope is fitted to: calls of at least 100 µs, where fixed
-overheads no longer matter. A line with fewer than three uses its last three. -/
+overheads no longer matter. Faster calls would only flatten the slope. -/
 def fitPoints (rows : Array Row) (step : Nat) : Array (Nat × Float) :=
   let pts := (rows.filter (·.step == step)).map fun r => (r.n, r.seconds)
-  let big := pts.filter (·.2 ≥ 1e-4)
-  if big.size ≥ 3 then big else pts.extract (pts.size - 3) pts.size
+  pts.filter (·.2 ≥ 1e-4)
+
+/-- A slope to two decimals, or a dash when a line has too few slow calls. -/
+def fmtSlope : Option Float → String
+  | some k => fixed 2 k
+  | none => "–"
 
 /-! ## The plot -/
 
@@ -250,7 +263,7 @@ def marker (shape : Nat) (x y : Float) (fill ring tip : String) : String :=
   body ++ (if tip.isEmpty then "" else s!"<title>{esc tip}</title>") ++ close
 
 /-- Draw the timings as a log–log line chart, with a legend below it. -/
-def svg (th : Theme) (ls : Array Line) (rows : Array Row) (slopes : Array Float)
+def svg (th : Theme) (ls : Array Line) (rows : Array Row) (slopes : Array (Option Float))
     (budgetMs : Nat) : String := Id.run do
   let W : Float := 960
   let M : Float := 24                       -- outer margin
@@ -346,7 +359,7 @@ def svg (th : Theme) (ls : Array Line) (rows : Array Row) (slopes : Array Float)
     out := out ++ text cLaw y 13 th.ink l.law
     out := out ++ text cExpr y 13 th.ink2 l.expr
     out := out ++ text cCost y 13 th.ink (cost l.degree)
-    out := out ++ text cSlope y 13 th.ink (fixed 2 slopes[i]!) "text-anchor=\"end\" font-variant-numeric=\"tabular-nums\""
+    out := out ++ text cSlope y 13 th.ink (fmtSlope slopes[i]!) "text-anchor=\"end\" font-variant-numeric=\"tabular-nums\""
   let note := s!"Best of three batches per point, on random lists. A line stops after its first call over {budgetMs} ms. Slopes are least-squares fits over calls of 100 µs or more."
   out := out ++ text M (H - 20) 12 th.muted note
   return out ++ "</svg>\n"
@@ -392,7 +405,7 @@ def main (args : List String) : IO UInt32 := do
     let mine := rows.filter (·.step == i)
     let at512 := (mine.find? (·.n == 512)).map (fmtTime ·.seconds) |>.getD "-"
     let last := mine.back!
-    IO.println s!"| {i + 1} | {l.law} | {cost l.degree} | {fixed 2 slopes[i]!} | {at512} | {commas last.n} | {fmtTime last.seconds} |"
+    IO.println s!"| {i + 1} | {l.law} | {cost l.degree} | {fmtSlope slopes[i]!} | {at512} | {commas last.n} | {fmtTime last.seconds} |"
   return 0
 
 end KadaneBench
