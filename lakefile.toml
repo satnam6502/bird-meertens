@@ -17,6 +17,13 @@ name = "kadane_bench"
 root = "KadaneBench"
 srcDir = "kadane/bench"
 
+[[lean_exe]]
+name = "kadane_diagrams"
+root = "KadaneDiagrams"
+srcDir = "kadane/diagrams"
+# No fused multiply-adds, so the SVGs are the same on every machine.
+moreLeancArgs = ["-ffp-contract=off"]
+
 [[lean_lib]]
 name = "Adder"
 srcDir = "Adder"
@@ -51,7 +58,7 @@ name = "Sorters"
 srcDir = "Sorters"
 leanOptions = { autoImplicit = true, maxRecDepth = 1000000 }
 
-# The drawing code shared by adder_diagrams and crc_diagrams.
+# The drawing code shared by kadane_diagrams, adder_diagrams and crc_diagrams.
 [[lean_lib]]
 name = "LawDiagrams"
 srcDir = "diagrams"

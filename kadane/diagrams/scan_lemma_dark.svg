@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="496.6" height="392.0" viewBox="0 0 496.6 392.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img" aria-labelledby="title desc">
+<title id="title">Scan lemma: map (foldl f e) ∘ inits = scanl f e</title>
+<desc id="desc">Scan lemma: map (foldl f e) ∘ inits = scanl f e. Starting from [3, −4, 2], the line before the step: inits gives [[], [3], [3, −4], [3, −4, 2]], then map (foldl (⊙) 0) gives [0, 0 ⊙ 3, (0 ⊙ 3) ⊙ −4, ((0 ⊙ 3) ⊙ −4) ⊙ 2] = [0, 3, 0, 2]. The line after: scanl (⊙) 0 gives [0, 0 ⊙ 3, (0 ⊙ 3) ⊙ −4, ((0 ⊙ 3) ⊙ −4) ⊙ 2] = [0, 3, 0, 2].</desc>
+<rect width="100%" height="100%" fill="#1a1a19"/>
+<text x="24.0" y="36" font-size="16" font-weight="600" fill="#ffffff">Scan lemma</text>
+<g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13">
+<text x="24.0" y="60.0" text-anchor="start" textLength="273.0" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">map (foldl f e) ∘ inits = scanl f e</tspan></text>
+<line x1="274.0" y1="114.0" x2="249.4" y2="166.8" stroke="#c3c2b7" stroke-width="1.5"/>
+<polygon points="246.0,174.0 254.3,166.8 246.2,163.0" fill="#c3c2b7"/>
+<text x="250.9" y="141.2" text-anchor="end" textLength="39.0" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">inits</tspan></text>
+<line x1="246.0" y1="198.0" x2="280.6" y2="251.3" stroke="#c3c2b7" stroke-width="1.5"/>
+<polygon points="285.0,258.0 283.3,247.2 275.8,252.1" fill="#c3c2b7"/>
+<text x="257.1" y="240.7" text-anchor="end" textLength="132.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">map (foldl (⊙) 0)</tspan></text>
+<line x1="301.0" y1="114.0" x2="301.0" y2="250.0" stroke="#c3c2b7" stroke-width="1.5"/>
+<polygon points="301.0,258.0 305.5,248.0 296.5,248.0" fill="#c3c2b7"/>
+<text x="311.0" y="190.0" text-anchor="start" textLength="85.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">scanl (⊙) 0</tspan></text>
+<text x="301.0" y="106.0" text-anchor="middle" textLength="78.0" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#3987e5">[</tspan><tspan fill="#ffffff">3</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">−4</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">2</tspan><tspan fill="#3987e5">]</tspan></text>
+<text x="141.0" y="190.0" text-anchor="middle" textLength="234.0" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#d95926">[</tspan><tspan fill="#3987e5">[]</tspan><tspan fill="#d95926">, </tspan><tspan fill="#3987e5">[</tspan><tspan fill="#ffffff">3</tspan><tspan fill="#3987e5">]</tspan><tspan fill="#d95926">, </tspan><tspan fill="#3987e5">[</tspan><tspan fill="#ffffff">3</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">−4</tspan><tspan fill="#3987e5">]</tspan><tspan fill="#d95926">, </tspan><tspan fill="#3987e5">[</tspan><tspan fill="#ffffff">3</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">−4</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">2</tspan><tspan fill="#3987e5">]</tspan><tspan fill="#d95926">]</tspan></text>
+<text x="301.0" y="274.0" text-anchor="middle" textLength="343.2" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#3987e5">[</tspan><tspan fill="#ffffff">0</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">0 ⊙ 3</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">(0 ⊙ 3) ⊙ −4</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">((0 ⊙ 3) ⊙ −4) ⊙ 2</tspan><tspan fill="#3987e5">]</tspan></text>
+<text x="301.0" y="294.0" text-anchor="middle" textLength="109.2" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">= </tspan><tspan fill="#3987e5">[</tspan><tspan fill="#ffffff">0</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">3</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">0</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">2</tspan><tspan fill="#3987e5">]</tspan></text>
+<rect x="24.0" y="332.0" width="234.6" height="36.0" rx="4" fill="#252524" stroke="#383835"/>
+<text x="36.0" y="354.0" text-anchor="start" textLength="210.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">where </tspan><tspan fill="#ffffff">a ⊙ b = max (a + b) 0</tspan></text>
+</g>
+</svg>
