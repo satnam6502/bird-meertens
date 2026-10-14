@@ -47,10 +47,35 @@ times every step, and a plot of the running times are all described in
 
 ## Building
 
-The toolchain is pinned in [`lean-toolchain`](lean-toolchain) and nothing
-outside core Lean is needed.
+The toolchain is pinned in [`lean-toolchain`](lean-toolchain). The CRC needs
+Mathlib, which [`lakefile.toml`](lakefile.toml) requires, and everything else
+needs only core Lean.
 
 ```bash
+lake exe cache get           # fetches a prebuilt Mathlib, for the CRC
 lake build                   # checks the derivations
 lake exe kadane_bench        # times every step of the Kadane derivation
 ```
+
+## More Examples
+
+The same approach works beyond list programs. Each of these examples has its
+own README, which describes the derivation, the laws it uses and how to build
+it.
+
+- [**A carry-lookahead adder**](Adder/README.md). The specification says that
+  the carry into a column is set when the columns below it overflow. A
+  ripple-carry adder computes the carries one column at a time, and a few laws
+  later they come out of Sklansky's parallel prefix network, in logarithmic
+  depth. A second calculation turns Lava's row of full adders into the same
+  network, and the same Lean function also gives a depth analysis and a
+  Verilog netlist.
+- [**A CRC**](CRC/README.md). The textbook CRC is the remainder of a
+  polynomial division over GF(2). Fold fusion turns it into the shift register
+  that hardware uses, and then into Sarwate's table that software uses, and a
+  proof shows that [`crc8.sv`](CRC/crc8.sv) is that shift register. This is the
+  one example that needs Mathlib.
+- [**Four sorter cores**](Sorters/README.md). The four sorters in Claessen,
+  Sheeran and Singh's *The Design and Verification of a Sorter Core* (CHARME
+  2001) look different, but calculation shows that all four come from
+  Batcher's two mergers, used in two ways.

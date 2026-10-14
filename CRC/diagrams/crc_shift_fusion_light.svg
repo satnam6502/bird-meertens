@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="529.5" height="404.3" viewBox="0 0 529.5 404.3" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img" aria-labelledby="title desc">
+<title id="title">Shift fusion: (· * X⁸) ∘ foldl horner 0 = foldl (hornerShift 8) 0</title>
+<desc id="desc">Shift fusion: (· * X⁸) ∘ foldl horner 0 = foldl (hornerShift 8) 0. Starting from [1, 0, 1, 1], the line before the step: foldl horner 0 gives X³ + X + 1, then · * X⁸ gives X¹¹ + X⁹ + X⁸. The line after: foldl (hornerShift 8) 0 gives (((0·X + X⁸)·X + 0)·X + X⁸)·X + X⁸ = X¹¹ + X⁹ + X⁸.</desc>
+<rect width="100%" height="100%" fill="#fcfcfb"/>
+<text x="24.0" y="36" font-size="16" font-weight="600" fill="#0b0b0b">Shift fusion</text>
+<g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13">
+<text x="24.0" y="60.0" text-anchor="start" textLength="397.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">(· * X⁸) ∘ foldl horner 0 = foldl (hornerShift 8) 0</tspan></text>
+<line x1="279.3" y1="114.0" x2="117.2" y2="183.1" stroke="#52514e" stroke-width="1.5"/>
+<polygon points="109.8,186.3 120.8,186.5 117.2,178.2" fill="#52514e"/>
+<text x="190.6" y="139.4" text-anchor="end" textLength="109.2" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">foldl horner 0</tspan></text>
+<line x1="82.8" y1="210.3" x2="82.8" y2="262.3" stroke="#52514e" stroke-width="1.5"/>
+<polygon points="82.8,270.3 87.3,260.3 78.3,260.3" fill="#52514e"/>
+<text x="72.8" y="244.3" text-anchor="end" textLength="46.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">· * X⁸</tspan></text>
+<line x1="314.1" y1="114.0" x2="314.1" y2="262.3" stroke="#52514e" stroke-width="1.5"/>
+<polygon points="314.1,270.3 318.6,260.3 309.6,260.3" fill="#52514e"/>
+<text x="324.1" y="196.1" text-anchor="start" textLength="179.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">foldl (hornerShift 8) 0</tspan></text>
+<text x="314.1" y="106.0" text-anchor="middle" textLength="93.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#2a78d6">[</tspan><tspan fill="#0b0b0b">1</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">0</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">1</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">1</tspan><tspan fill="#2a78d6">]</tspan></text>
+<text x="82.8" y="202.3" text-anchor="middle" textLength="78.0" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#0b0b0b">X³ + X + 1</tspan></text>
+<text x="82.8" y="286.3" text-anchor="middle" textLength="101.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#0b0b0b">X¹¹ + X⁹ + X⁸</tspan></text>
+<text x="314.1" y="286.3" text-anchor="middle" textLength="265.2" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#0b0b0b">(((0·X + X⁸)·X + 0)·X + X⁸)·X + X⁸</tspan></text>
+<text x="314.1" y="306.3" text-anchor="middle" textLength="117.0" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">= </tspan><tspan fill="#0b0b0b">X¹¹ + X⁹ + X⁸</tspan></text>
+<text x="157.5" y="286.3" text-anchor="middle" textLength="7.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">=</tspan></text>
+<rect x="24.0" y="344.3" width="304.8" height="36.0" rx="4" fill="#f0efec" stroke="#e1e0d9"/>
+<text x="36.0" y="366.3" text-anchor="start" textLength="280.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">where </tspan><tspan fill="#0b0b0b">hornerShift k p b = p·X + b·Xᵏ</tspan></text>
+</g>
+</svg>

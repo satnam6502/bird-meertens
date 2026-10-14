@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820.0" height="380.0" viewBox="0 0 820.0 380.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img" aria-labelledby="title desc">
+<title id="title">Data refinement: an 8-bit LFSR, which is crc8.sv</title>
+<desc id="desc">Data refinement: an 8-bit LFSR, which is crc8.sv. The circuit of the line toPoly ∘ foldl (lfsrStep 0x07) 0. The taps are the bits of 0x07, found by running lfsrStep on each unit input. Bit rᵢ holds the coefficient of Xⁱ. Each clock shifts the register up one bit. crc8.sv has exactly these gates: crc8Next_eq_lfsrStep proves it.</desc>
+<rect width="100%" height="100%" fill="#1a1a19"/>
+<text x="24.0" y="36" font-size="16" font-weight="600" fill="#ffffff">Data refinement: an 8-bit LFSR, which is crc8.sv</text>
+<g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13">
+<text x="24.0" y="60.0" text-anchor="start" textLength="249.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">toPoly ∘ foldl (lfsrStep 0x07) 0</tspan></text>
+<polyline points="94.0,170.0 111.0,170.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polygon points="111.0,170.0 103.0,166.5 103.0,173.5" fill="#c3c2b7"/>
+<polyline points="129.0,170.0 146.0,170.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polygon points="146.0,170.0 138.0,166.5 138.0,173.5" fill="#c3c2b7"/>
+<polyline points="120.0,232.0 120.0,179.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polygon points="120.0,179.0 116.5,187.0 123.5,187.0" fill="#c3c2b7"/>
+<circle cx="120.0" cy="232.0" r="3" fill="#c3c2b7"/>
+<polyline points="186.0,170.0 203.0,170.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polygon points="203.0,170.0 195.0,166.5 195.0,173.5" fill="#c3c2b7"/>
+<polyline points="221.0,170.0 238.0,170.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polygon points="238.0,170.0 230.0,166.5 230.0,173.5" fill="#c3c2b7"/>
+<polyline points="212.0,232.0 212.0,179.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polygon points="212.0,179.0 208.5,187.0 215.5,187.0" fill="#c3c2b7"/>
+<circle cx="212.0" cy="232.0" r="3" fill="#c3c2b7"/>
+<polyline points="278.0,170.0 330.0,170.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polygon points="330.0,170.0 322.0,166.5 322.0,173.5" fill="#c3c2b7"/>
+<polyline points="370.0,170.0 422.0,170.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polygon points="422.0,170.0 414.0,166.5 414.0,173.5" fill="#c3c2b7"/>
+<polyline points="462.0,170.0 514.0,170.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polygon points="514.0,170.0 506.0,166.5 506.0,173.5" fill="#c3c2b7"/>
+<polyline points="554.0,170.0 606.0,170.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polygon points="606.0,170.0 598.0,166.5 598.0,173.5" fill="#c3c2b7"/>
+<polyline points="646.0,170.0 698.0,170.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polygon points="698.0,170.0 690.0,166.5 690.0,173.5" fill="#c3c2b7"/>
+<polyline points="738.0,170.0 778.0,170.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polygon points="778.0,170.0 770.0,166.5 770.0,173.5" fill="#c3c2b7"/>
+<polyline points="787.0,131.0 787.0,161.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polygon points="787.0,161.0 790.5,153.0 783.5,153.0" fill="#c3c2b7"/>
+<polyline points="787.0,179.0 787.0,232.0 30.0,232.0 30.0,170.0 54.0,170.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polygon points="54.0,170.0 46.0,166.5 46.0,173.5" fill="#c3c2b7"/>
+<text x="396.0" y="250.0" text-anchor="middle" textLength="124.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">feedback: r₇ ⊕ b</tspan></text>
+<rect x="54.0" y="156.0" width="40.0" height="28.0" rx="1" fill="#1a1a19" stroke="#ffffff" stroke-width="2"/>
+<path d="M 68.0 184.0 L 74.0 178.0 L 80.0 184.0" fill="none" stroke="#ffffff" stroke-width="1.25"/>
+<text x="74.0" y="174.5" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">r₀</tspan></text>
+<rect x="146.0" y="156.0" width="40.0" height="28.0" rx="1" fill="#1a1a19" stroke="#ffffff" stroke-width="2"/>
+<path d="M 160.0 184.0 L 166.0 178.0 L 172.0 184.0" fill="none" stroke="#ffffff" stroke-width="1.25"/>
+<text x="166.0" y="174.5" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">r₁</tspan></text>
+<rect x="238.0" y="156.0" width="40.0" height="28.0" rx="1" fill="#1a1a19" stroke="#ffffff" stroke-width="2"/>
+<path d="M 252.0 184.0 L 258.0 178.0 L 264.0 184.0" fill="none" stroke="#ffffff" stroke-width="1.25"/>
+<text x="258.0" y="174.5" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">r₂</tspan></text>
+<rect x="330.0" y="156.0" width="40.0" height="28.0" rx="1" fill="#1a1a19" stroke="#ffffff" stroke-width="2"/>
+<path d="M 344.0 184.0 L 350.0 178.0 L 356.0 184.0" fill="none" stroke="#ffffff" stroke-width="1.25"/>
+<text x="350.0" y="174.5" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">r₃</tspan></text>
+<rect x="422.0" y="156.0" width="40.0" height="28.0" rx="1" fill="#1a1a19" stroke="#ffffff" stroke-width="2"/>
+<path d="M 436.0 184.0 L 442.0 178.0 L 448.0 184.0" fill="none" stroke="#ffffff" stroke-width="1.25"/>
+<text x="442.0" y="174.5" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">r₄</tspan></text>
+<rect x="514.0" y="156.0" width="40.0" height="28.0" rx="1" fill="#1a1a19" stroke="#ffffff" stroke-width="2"/>
+<path d="M 528.0 184.0 L 534.0 178.0 L 540.0 184.0" fill="none" stroke="#ffffff" stroke-width="1.25"/>
+<text x="534.0" y="174.5" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">r₅</tspan></text>
+<rect x="606.0" y="156.0" width="40.0" height="28.0" rx="1" fill="#1a1a19" stroke="#ffffff" stroke-width="2"/>
+<path d="M 620.0 184.0 L 626.0 178.0 L 632.0 184.0" fill="none" stroke="#ffffff" stroke-width="1.25"/>
+<text x="626.0" y="174.5" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">r₆</tspan></text>
+<rect x="698.0" y="156.0" width="40.0" height="28.0" rx="1" fill="#1a1a19" stroke="#ffffff" stroke-width="2"/>
+<path d="M 712.0 184.0 L 718.0 178.0 L 724.0 184.0" fill="none" stroke="#ffffff" stroke-width="1.25"/>
+<text x="718.0" y="174.5" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">r₇</tspan></text>
+<circle cx="120.0" cy="170.0" r="9" fill="#1a1a19" stroke="#c3c2b7" stroke-width="1.5"/>
+<path d="M 111.0 170.0 H 129.0 M 120.0 161.0 V 179.0" stroke="#c3c2b7" stroke-width="1.5"/>
+<circle cx="212.0" cy="170.0" r="9" fill="#1a1a19" stroke="#c3c2b7" stroke-width="1.5"/>
+<path d="M 203.0 170.0 H 221.0 M 212.0 161.0 V 179.0" stroke="#c3c2b7" stroke-width="1.5"/>
+<circle cx="787.0" cy="170.0" r="9" fill="#1a1a19" stroke="#c3c2b7" stroke-width="1.5"/>
+<path d="M 778.0 170.0 H 796.0 M 787.0 161.0 V 179.0" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="787.0" y="126.5" text-anchor="middle" textLength="7.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">b</tspan></text>
+<text x="74.0" y="208.5" text-anchor="middle" textLength="7.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">1</tspan></text>
+<text x="166.0" y="208.5" text-anchor="middle" textLength="7.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">X</tspan></text>
+<text x="258.0" y="208.5" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">X²</tspan></text>
+<text x="350.0" y="208.5" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">X³</tspan></text>
+<text x="442.0" y="208.5" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">X⁴</tspan></text>
+<text x="534.0" y="208.5" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">X⁵</tspan></text>
+<text x="626.0" y="208.5" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">X⁶</tspan></text>
+<text x="718.0" y="208.5" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">X⁷</tspan></text>
+<rect x="24.0" y="280.0" width="772.0" height="76.0" rx="4" fill="#252524" stroke="#383835"/>
+<text x="36.0" y="302.0" text-anchor="start" textLength="592.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">The taps are the bits of 0x07, found by running lfsrStep on each unit input.</tspan></text>
+<text x="36.0" y="322.0" text-anchor="start" textLength="608.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">Bit rᵢ holds the coefficient of Xⁱ. Each clock shifts the register up one bit.</tspan></text>
+<text x="36.0" y="342.0" text-anchor="start" textLength="499.2" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">crc8.sv has exactly these gates: crc8Next_eq_lfsrStep proves it.</tspan></text>
+</g>
+</svg>

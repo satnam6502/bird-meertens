@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="745.9" height="392.0" viewBox="0 0 745.9 392.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img" aria-labelledby="title desc">
+<title id="title">Fold–map fusion: foldl (foldl f) e ∘ map bitsOf = foldl byteStep e</title>
+<desc id="desc">Fold–map fusion: foldl (foldl f) e ∘ map bitsOf = foldl byteStep e. Starting from [0x31, 0x32], the line before the step: map bitsOf gives [[0, 0, 1, 1, 0, 0, 0, 1], [0, 0, 1, 1, 0, 0, 1, 0]], then foldl (foldl (lfsrStep 0x1021)) 0 gives 0x20B5. The line after: foldl (byteStep 0x1021) 0 gives 0x20B5.</desc>
+<rect width="100%" height="100%" fill="#1a1a19"/>
+<text x="24.0" y="36" font-size="16" font-weight="600" fill="#ffffff">Fold–map fusion</text>
+<g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13">
+<text x="24.0" y="60.0" text-anchor="start" textLength="382.2" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">foldl (foldl f) e ∘ map bitsOf = foldl byteStep e</tspan></text>
+<line x1="293.4" y1="114.0" x2="293.4" y2="166.0" stroke="#c3c2b7" stroke-width="1.5"/>
+<polygon points="293.4,174.0 297.9,164.0 288.9,164.0" fill="#c3c2b7"/>
+<text x="283.4" y="148.0" text-anchor="end" textLength="78.0" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">map bitsOf</tspan></text>
+<line x1="293.4" y1="198.0" x2="293.4" y2="250.0" stroke="#c3c2b7" stroke-width="1.5"/>
+<polygon points="293.4,258.0 297.9,248.0 288.9,248.0" fill="#c3c2b7"/>
+<text x="283.4" y="232.0" text-anchor="end" textLength="257.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">foldl (foldl (lfsrStep 0x1021)) 0</tspan></text>
+<path d="M 348.2 102.0 C 574.3 102.0, 574.3 270.0, 332.8 270.0" fill="none" stroke="#c3c2b7" stroke-width="1.5"/>
+<polygon points="324.8,270.0 334.8,265.5 334.8,274.5" fill="#c3c2b7"/>
+<text x="524.9" y="190.0" text-anchor="start" textLength="195.0" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">foldl (byteStep 0x1021) 0</tspan></text>
+<text x="293.4" y="106.0" text-anchor="middle" textLength="93.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#3987e5">[</tspan><tspan fill="#ffffff">0x31</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">0x32</tspan><tspan fill="#3987e5">]</tspan></text>
+<text x="293.4" y="190.0" text-anchor="middle" textLength="405.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#d95926">[</tspan><tspan fill="#3987e5">[</tspan><tspan fill="#ffffff">0</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">0</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">1</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">1</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">0</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">0</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">0</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">1</tspan><tspan fill="#3987e5">]</tspan><tspan fill="#d95926">, </tspan><tspan fill="#3987e5">[</tspan><tspan fill="#ffffff">0</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">0</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">1</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">1</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">0</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">0</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">1</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">0</tspan><tspan fill="#3987e5">]</tspan><tspan fill="#d95926">]</tspan></text>
+<text x="293.4" y="274.0" text-anchor="middle" textLength="46.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">0x20B5</tspan></text>
+<rect x="24.0" y="312.0" width="492.0" height="56.0" rx="4" fill="#252524" stroke="#383835"/>
+<text x="36.0" y="334.0" text-anchor="start" textLength="468.0" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">where </tspan><tspan fill="#ffffff">byteStep poly r x = foldl (lfsrStep poly) r (bitsOf x)</tspan></text>
+<text x="36.0" y="354.0" text-anchor="start" textLength="452.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">  and </tspan><tspan fill="#ffffff">bitsOf x lists the bits of x, most significant first</tspan></text>
+</g>
+</svg>

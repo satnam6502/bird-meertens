@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="554.4" height="392.0" viewBox="0 0 554.4 392.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img" aria-labelledby="title desc">
+<title id="title">Reduction fusion: (· %ₘ g) ∘ foldl (hornerShift 8) 0 = foldl (hornerMod g 8) 0</title>
+<desc id="desc">Reduction fusion: (· %ₘ g) ∘ foldl (hornerShift 8) 0 = foldl (hornerMod g 8) 0. Starting from [1, 0, 1, 1], the line before the step: foldl (hornerShift 8) 0 gives X¹¹ + X⁹ + X⁸, then · %ₘ g gives X⁵ + X⁴ + 1. The line after: foldl (hornerMod g 8) 0 gives X⁵ + X⁴ + 1.</desc>
+<rect width="100%" height="100%" fill="#1a1a19"/>
+<text x="24.0" y="36" font-size="16" font-weight="600" fill="#ffffff">Reduction fusion</text>
+<g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13">
+<text x="24.0" y="60.0" text-anchor="start" textLength="468.0" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">(· %ₘ g) ∘ foldl (hornerShift 8) 0 = foldl (hornerMod g 8) 0</tspan></text>
+<line x1="238.3" y1="114.0" x2="158.4" y2="169.4" stroke="#c3c2b7" stroke-width="1.5"/>
+<polygon points="151.8,174.0 162.6,172.0 157.5,164.6" fill="#c3c2b7"/>
+<text x="189.4" y="134.9" text-anchor="end" textLength="179.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">foldl (hornerShift 8) 0</tspan></text>
+<line x1="151.8" y1="198.0" x2="250.2" y2="254.0" stroke="#c3c2b7" stroke-width="1.5"/>
+<polygon points="257.1,258.0 250.7,249.1 246.2,257.0" fill="#c3c2b7"/>
+<text x="199.5" y="245.9" text-anchor="end" textLength="46.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">· %ₘ g</tspan></text>
+<line x1="273.1" y1="114.0" x2="273.1" y2="250.0" stroke="#c3c2b7" stroke-width="1.5"/>
+<polygon points="273.1,258.0 277.6,248.0 268.6,248.0" fill="#c3c2b7"/>
+<text x="283.1" y="190.0" text-anchor="start" textLength="179.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">foldl (hornerMod g 8) 0</tspan></text>
+<text x="273.1" y="106.0" text-anchor="middle" textLength="93.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#3987e5">[</tspan><tspan fill="#ffffff">1</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">0</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">1</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">1</tspan><tspan fill="#3987e5">]</tspan></text>
+<text x="113.1" y="190.0" text-anchor="middle" textLength="101.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">X¹¹ + X⁹ + X⁸</tspan></text>
+<text x="273.1" y="274.0" text-anchor="middle" textLength="85.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">X⁵ + X⁴ + 1</tspan></text>
+<rect x="24.0" y="312.0" width="359.4" height="56.0" rx="4" fill="#252524" stroke="#383835"/>
+<text x="36.0" y="334.0" text-anchor="start" textLength="195.0" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">where </tspan><tspan fill="#ffffff">g = X⁸ + X² + X + 1</tspan></text>
+<text x="36.0" y="354.0" text-anchor="start" textLength="335.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">  and </tspan><tspan fill="#ffffff">hornerMod g k p b = (p·X + b·Xᵏ) %ₘ g</tspan></text>
+</g>
+</svg>

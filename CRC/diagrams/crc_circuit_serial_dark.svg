@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="811.4" height="297.0" viewBox="0 0 811.4 297.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img" aria-labelledby="title desc">
+<title id="title">A byte at a time, through the bit-serial LFSR</title>
+<desc id="desc">A byte at a time, through the bit-serial LFSR. The circuit of the line toPoly ∘ foldl (lfsrStep 0x1021) 0 ∘ flatten ∘ map bitsOf. bitsOf turns each byte into eight bits, most significant first: eight clocks a byte. Folding over the bytes in turn, as foldl (foldl (lfsrStep 0x1021)) 0, changes nothing here.</desc>
+<rect width="100%" height="100%" fill="#1a1a19"/>
+<text x="24.0" y="36" font-size="16" font-weight="600" fill="#ffffff">A byte at a time, through the bit-serial LFSR</text>
+<g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13">
+<text x="24.0" y="60.0" text-anchor="start" textLength="444.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">toPoly ∘ foldl (lfsrStep 0x1021) 0 ∘ flatten ∘ map bitsOf</tspan></text>
+<polyline points="39.8,140.0 110.6,140.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polygon points="110.6,140.0 102.6,136.5 102.6,143.5" fill="#c3c2b7"/>
+<text x="75.2" y="131.0" text-anchor="middle" textLength="46.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">a byte</tspan></text>
+<polyline points="177.4,140.0 221.4,140.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polygon points="221.4,140.0 213.4,136.5 213.4,143.5" fill="#c3c2b7"/>
+<text x="199.4" y="131.0" text-anchor="middle" textLength="7.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">b</tspan></text>
+<polyline points="358.4,140.0 402.4,140.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polygon points="402.4,140.0 394.4,136.5 394.4,143.5" fill="#c3c2b7"/>
+<polyline points="477.0,140.0 649.2,140.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polygon points="649.2,140.0 641.2,136.5 641.2,143.5" fill="#c3c2b7"/>
+<text x="563.1" y="131.0" text-anchor="middle" textLength="148.2" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">after the last byte</tspan></text>
+<polyline points="716.0,140.0 760.0,140.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polygon points="760.0,140.0 752.0,136.5 752.0,143.5" fill="#c3c2b7"/>
+<polyline points="491.0,140.0 491.0,185.0 289.9,185.0 289.9,154.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polygon points="289.9,154.0 286.4,162.0 293.4,162.0" fill="#c3c2b7"/>
+<circle cx="491.0" cy="140.0" r="3" fill="#c3c2b7"/>
+<text x="33.9" y="144.5" text-anchor="middle" textLength="7.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">x</tspan></text>
+<rect x="110.6" y="126.0" width="66.8" height="28.0" rx="3" fill="#1a1a19" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="144.0" y="144.5" text-anchor="middle" textLength="46.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">bitsOf</tspan></text>
+<rect x="221.4" y="126.0" width="137.0" height="28.0" rx="3" fill="#1a1a19" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="289.9" y="144.5" text-anchor="middle" textLength="117.0" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">lfsrStep 0x1021</tspan></text>
+<rect x="402.4" y="117.0" width="74.6" height="46.0" rx="1" fill="#1a1a19" stroke="#ffffff" stroke-width="2"/>
+<path d="M 433.7 163.0 L 439.7 157.0 L 445.7 163.0" fill="none" stroke="#ffffff" stroke-width="1.25"/>
+<text x="439.7" y="135.5" text-anchor="middle" textLength="7.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">r</tspan></text>
+<text x="439.7" y="153.5" text-anchor="middle" textLength="54.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">16 bits</tspan></text>
+<rect x="649.2" y="126.0" width="66.8" height="28.0" rx="3" fill="#1a1a19" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="682.6" y="144.5" text-anchor="middle" textLength="46.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">toPoly</tspan></text>
+<text x="773.7" y="144.5" text-anchor="middle" textLength="23.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">CRC</tspan></text>
+<rect x="24.0" y="217.0" width="763.4" height="56.0" rx="4" fill="#252524" stroke="#383835"/>
+<text x="36.0" y="239.0" text-anchor="start" textLength="655.2" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">bitsOf turns each byte into eight bits, most significant first: eight clocks a byte.</tspan></text>
+<text x="36.0" y="259.0" text-anchor="start" textLength="709.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">Folding over the bytes in turn, as foldl (foldl (lfsrStep 0x1021)) 0, changes nothing here.</tspan></text>
+</g>
+</svg>

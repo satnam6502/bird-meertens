@@ -144,6 +144,6 @@ v4.34.1) and nothing outside core Lean is needed. Run these from the root of
 the repository.
 
 ```bash
-lake build                   # checks the derivation
+lake build Kadane            # checks the derivation
 lake exe kadane_bench        # the timings and plots
 ```
