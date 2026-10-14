@@ -14,9 +14,44 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
 
-      # Installs the toolchain pinned in lean-toolchain, then checks the
-      # derivation and compiles the benchmark (and so lines_eq_mss).
+      # Installs the toolchain pinned in lean-toolchain and fetches a prebuilt
+      # Mathlib for the CRC. Then checks every derivation and compiles the
+      # executables (and so the benchmark's lines_eq_mss).
       - name: Build
         uses: leanprover/lean-action@f061402b660e0c34644504b324e830f2991d4865 # v1.6.1
         with:
-          build-args: Kadane kadane_bench
+          use-mathlib-cache: "true"
+          build-args: Kadane kadane_bench Adder adder_diagrams adder_netlist CRC crc_diagrams Sorters
+
+      # The diagrams and the netlist are generated. Regenerate them, check that
+      # they match the committed files, and check that each README shows every
+      # diagram, light and dark, and no diagram that is missing.
+      - name: Check that the generated files are up to date
+        run: |
+          lake exe adder_diagrams
+          lake exe crc_diagrams
+          lake exe adder_netlist 32
+          git add --intent-to-add -- Adder CRC
+          git diff --exit-code -- Adder CRC || {
+            echo "::error::Generated files are stale. Run 'lake exe adder_diagrams', 'lake exe crc_diagrams' and 'lake exe adder_netlist 32' with the toolchain in lean-toolchain, and commit the result."
+            exit 1
+          }
+          python3 -c 'import sys, xml.etree.ElementTree as E; [E.parse(f) for f in sys.argv[1:]]' Adder/diagrams/*.svg CRC/diagrams/*.svg
+          for d in Adder CRC; do
+            for f in "$d"/diagrams/*.svg; do
+              n=$(basename "$f" .svg); n=${n%_light}; n=${n%_dark}
+              grep -qF "src=\"diagrams/${n}_light.svg\"" "$d/README.md" &&
+                grep -qF "srcset=\"diagrams/${n}_dark.svg\"" "$d/README.md" ||
+                { echo "::error::$d/README.md does not show $n in light and dark"; exit 1; }
+            done
+            for f in $(grep -oE '(src|srcset)="diagrams/[A-Za-z0-9_-]*\.svg"' "$d/README.md" | grep -oE 'diagrams/[A-Za-z0-9_-]*\.svg' | sort -u); do
+              test -f "$d/$f" || { echo "::error::$d/README.md shows a missing $d/$f"; exit 1; }
+            done
+          done
+
+      # Only the Verilog printer is unverified. Lint what it printed, and prove
+      # with a SAT solver that the adder equals + for every input.
+      - name: Check the adder's Verilog
+        run: |
+          sudo apt-get update && sudo apt-get install -y verilator yosys
+          make -C Adder/netlist lint equiv OSS_YOSYS=yosys

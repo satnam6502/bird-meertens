@@ -1,6 +1,12 @@
 name = "bird-meertens"
 version = "0.1.0"
-defaultTargets = ["Kadane"]
+defaultTargets = ["Kadane", "Adder", "CRC", "Sorters"]
+
+# Only the CRC needs Mathlib. Run `lake exe cache get` before building it.
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.34.1"
 
 [[lean_lib]]
 name = "Kadane"
@@ -10,3 +16,43 @@ srcDir = "kadane"
 name = "kadane_bench"
 root = "KadaneBench"
 srcDir = "kadane/bench"
+
+[[lean_lib]]
+name = "Adder"
+srcDir = "Adder"
+leanOptions = { autoImplicit = true, maxRecDepth = 1000000 }
+
+[[lean_exe]]
+name = "adder_netlist"
+root = "AdderNetlist"
+srcDir = "Adder/netlist"
+
+[[lean_exe]]
+name = "adder_diagrams"
+root = "AdderDiagrams"
+srcDir = "Adder/diagrams"
+# No fused multiply-adds, so the SVGs are the same on every machine.
+moreLeancArgs = ["-ffp-contract=off"]
+
+[[lean_lib]]
+name = "CRC"
+srcDir = "CRC"
+leanOptions = { autoImplicit = true, maxRecDepth = 1000000 }
+
+[[lean_exe]]
+name = "crc_diagrams"
+root = "CrcDiagrams"
+srcDir = "CRC/diagrams"
+# No fused multiply-adds, so the SVGs are the same on every machine.
+moreLeancArgs = ["-ffp-contract=off"]
+
+[[lean_lib]]
+name = "Sorters"
+srcDir = "Sorters"
+leanOptions = { autoImplicit = true, maxRecDepth = 1000000 }
+
+# The drawing code shared by adder_diagrams and crc_diagrams.
+[[lean_lib]]
+name = "LawDiagrams"
+srcDir = "diagrams"
+moreLeancArgs = ["-ffp-contract=off"]

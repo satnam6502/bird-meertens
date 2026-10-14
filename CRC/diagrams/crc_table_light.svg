@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680.4" height="368.0" viewBox="0 0 680.4 368.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img" aria-labelledby="title desc">
+<title id="title">Sarwate's table: byteStep poly = tableStep (table poly), for a width of 8 or more</title>
+<desc id="desc">Sarwate's table: byteStep poly = tableStep (table poly), for a width of 8 or more. Starting from (0x2672, 0x32), the line before the step: byteStep 0x1021 gives 0x20B5. The line after: tableStep (table 0x1021) gives 0x7200 ⊕ table (0x26 ⊕ 0x32) = 0x7200 ⊕ 0x52B5 = 0x20B5.</desc>
+<rect width="100%" height="100%" fill="#fcfcfb"/>
+<text x="24.0" y="36" font-size="16" font-weight="600" fill="#0b0b0b">Sarwate's table</text>
+<g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13">
+<text x="24.0" y="60.0" text-anchor="start" textLength="499.2" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">byteStep poly = tableStep (table poly), for a width of 8 or more</tspan></text>
+<line x1="214.7" y1="114.0" x2="117.6" y2="170.0" stroke="#52514e" stroke-width="1.5"/>
+<polygon points="110.7,174.0 121.6,172.9 117.1,165.1" fill="#52514e"/>
+<text x="157.7" y="134.1" text-anchor="end" textLength="117.0" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">byteStep 0x1021</tspan></text>
+<line x1="246.7" y1="114.0" x2="343.8" y2="170.0" stroke="#52514e" stroke-width="1.5"/>
+<polygon points="350.7,174.0 344.3,165.1 339.8,172.9" fill="#52514e"/>
+<text x="303.7" y="134.1" text-anchor="start" textLength="187.2" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">tableStep (table 0x1021)</tspan></text>
+<text x="230.7" y="106.0" text-anchor="middle" textLength="109.2" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#0b0b0b">(0x2672, 0x32)</tspan></text>
+<text x="110.7" y="190.0" text-anchor="middle" textLength="46.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#0b0b0b">0x20B5</tspan></text>
+<text x="350.7" y="190.0" text-anchor="middle" textLength="218.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#0b0b0b">0x7200 ⊕ table (0x26 ⊕ 0x32)</tspan></text>
+<text x="350.7" y="210.0" text-anchor="middle" textLength="132.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">= </tspan><tspan fill="#0b0b0b">0x7200 ⊕ 0x52B5</tspan></text>
+<text x="350.7" y="230.0" text-anchor="middle" textLength="62.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">= </tspan><tspan fill="#0b0b0b">0x20B5</tspan></text>
+<text x="187.8" y="190.0" text-anchor="middle" textLength="7.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">=</tspan></text>
+<rect x="24.0" y="268.0" width="632.4" height="76.0" rx="4" fill="#f0efec" stroke="#e1e0d9"/>
+<text x="36.0" y="290.0" text-anchor="start" textLength="608.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">where </tspan><tspan fill="#0b0b0b">the start is (r, x): the register after the byte 0x31, and the byte 0x32</tspan></text>
+<text x="36.0" y="310.0" text-anchor="start" textLength="382.2" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">  and </tspan><tspan fill="#0b0b0b">tableStep t r x = (r &lt;&lt;&lt; 8) ⊕ t (r₁₅…₈ ⊕ x)</tspan></text>
+<text x="36.0" y="330.0" text-anchor="start" textLength="530.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">  and </tspan><tspan fill="#0b0b0b">table poly i = byteStep poly 0 i, the CRC of the single byte i</tspan></text>
+</g>
+</svg>

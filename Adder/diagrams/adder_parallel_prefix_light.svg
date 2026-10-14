@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="907.2" height="366.1" viewBox="0 0 907.2 366.1" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img" aria-labelledby="title desc">
+<title id="title">Parallel prefix: scan1 (⊛) = prefixNet (⊛), because ⊛ is associative</title>
+<desc id="desc">Parallel prefix: scan1 (⊛) = prefixNet (⊛), because ⊛ is associative. Starting from [q₀, q₁, q₂, q₃] = [(1, 0), (0, 1), (0, 0), (1, 0)], the line before the step: scan1 (⊛) gives [q₀, q₀ ⊛ q₁, (q₀ ⊛ q₁) ⊛ q₂, ((q₀ ⊛ q₁) ⊛ q₂) ⊛ q₃] = [(1, 0), (1, 0), (0, 0), (1, 0)]. The line after: prefixNet (⊛) gives [q₀, q₀ ⊛ q₁, (q₀ ⊛ q₁) ⊛ q₂, (q₀ ⊛ q₁) ⊛ (q₂ ⊛ q₃)] = [(1, 0), (1, 0), (0, 0), (1, 0)].</desc>
+<rect width="100%" height="100%" fill="#fcfcfb"/>
+<text x="24.0" y="36" font-size="16" font-weight="600" fill="#0b0b0b">Parallel prefix</text>
+<g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13">
+<text x="24.0" y="60.0" text-anchor="start" textLength="397.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">scan1 (⊛) = prefixNet (⊛), because ⊛ is associative</tspan></text>
+<line x1="437.6" y1="134.0" x2="234.1" y2="228.7" stroke="#52514e" stroke-width="1.5"/>
+<polygon points="226.8,232.1 237.8,231.9 234.0,223.8" fill="#52514e"/>
+<text x="328.0" y="172.5" text-anchor="end" textLength="70.2" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">scan1 (⊛)</tspan></text>
+<line x1="469.6" y1="134.0" x2="673.1" y2="228.7" stroke="#52514e" stroke-width="1.5"/>
+<polygon points="680.4,232.1 673.2,223.8 669.4,231.9" fill="#52514e"/>
+<text x="579.2" y="172.5" text-anchor="start" textLength="101.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">prefixNet (⊛)</tspan></text>
+<text x="453.6" y="106.0" text-anchor="middle" textLength="124.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#2a78d6">[</tspan><tspan fill="#0b0b0b">q₀</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">q₁</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">q₂</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">q₃</tspan><tspan fill="#2a78d6">]</tspan></text>
+<text x="453.6" y="126.0" text-anchor="middle" textLength="265.2" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">= </tspan><tspan fill="#2a78d6">[</tspan><tspan fill="#0b0b0b">(1, 0)</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">(0, 1)</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">(0, 0)</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">(1, 0)</tspan><tspan fill="#2a78d6">]</tspan></text>
+<text x="226.8" y="248.1" text-anchor="middle" textLength="405.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#2a78d6">[</tspan><tspan fill="#0b0b0b">q₀</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">q₀ ⊛ q₁</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">(q₀ ⊛ q₁) ⊛ q₂</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">((q₀ ⊛ q₁) ⊛ q₂) ⊛ q₃</tspan><tspan fill="#2a78d6">]</tspan></text>
+<text x="226.8" y="268.1" text-anchor="middle" textLength="265.2" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">= </tspan><tspan fill="#2a78d6">[</tspan><tspan fill="#0b0b0b">(1, 0)</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">(1, 0)</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">(0, 0)</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">(1, 0)</tspan><tspan fill="#2a78d6">]</tspan></text>
+<text x="680.4" y="248.1" text-anchor="middle" textLength="405.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#2a78d6">[</tspan><tspan fill="#0b0b0b">q₀</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">q₀ ⊛ q₁</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">(q₀ ⊛ q₁) ⊛ q₂</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">(q₀ ⊛ q₁) ⊛ (q₂ ⊛ q₃)</tspan><tspan fill="#2a78d6">]</tspan></text>
+<text x="680.4" y="268.1" text-anchor="middle" textLength="265.2" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">= </tspan><tspan fill="#2a78d6">[</tspan><tspan fill="#0b0b0b">(1, 0)</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">(1, 0)</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">(0, 0)</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">(1, 0)</tspan><tspan fill="#2a78d6">]</tspan></text>
+<text x="453.6" y="248.1" text-anchor="middle" textLength="7.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">=</tspan></text>
+<rect x="24.0" y="306.1" width="265.8" height="36.0" rx="4" fill="#f0efec" stroke="#e1e0d9"/>
+<text x="36.0" y="328.1" text-anchor="start" textLength="241.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">where </tspan><tspan fill="#0b0b0b">(a ⊛ b) ⊛ c = a ⊛ (b ⊛ c)</tspan></text>
+</g>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="505.6" height="372.0" viewBox="0 0 505.6 372.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img" aria-labelledby="title desc">
+<title id="title">Definition of scan1: scanl (⊛) (c, false) = scan1 (⊛) ∘ ((c, false) :: ·)</title>
+<desc id="desc">Definition of scan1: scanl (⊛) (c, false) = scan1 (⊛) ∘ ((c, false) :: ·). Starting from [(0, 1), (0, 0), (1, 0)], the line before the step: scanl (⊛) (c, false) gives [(1, 0), (1, 0), (0, 0), (1, 0)]. The line after: ((c, false) :: ·) gives [(1, 0), (0, 1), (0, 0), (1, 0)], then scan1 (⊛) gives [(1, 0), (1, 0), (0, 0), (1, 0)].</desc>
+<rect width="100%" height="100%" fill="#fcfcfb"/>
+<text x="24.0" y="36" font-size="16" font-weight="600" fill="#0b0b0b">Definition of scan1</text>
+<g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13">
+<text x="24.0" y="60.0" text-anchor="start" textLength="405.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">scanl (⊛) (c, false) = scan1 (⊛) ∘ ((c, false) :: ·)</tspan></text>
+<line x1="273.6" y1="114.0" x2="273.6" y2="166.0" stroke="#52514e" stroke-width="1.5"/>
+<polygon points="273.6,174.0 278.1,164.0 269.1,164.0" fill="#52514e"/>
+<text x="283.6" y="148.0" text-anchor="start" textLength="132.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">((c, false) :: ·)</tspan></text>
+<line x1="244.0" y1="198.0" x2="212.1" y2="251.1" stroke="#52514e" stroke-width="1.5"/>
+<polygon points="208.0,258.0 217.0,251.7 209.3,247.1" fill="#52514e"/>
+<text x="234.6" y="240.2" text-anchor="start" textLength="70.2" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">scan1 (⊛)</tspan></text>
+<line x1="192.0" y1="114.0" x2="192.0" y2="250.0" stroke="#52514e" stroke-width="1.5"/>
+<polygon points="192.0,258.0 196.5,248.0 187.5,248.0" fill="#52514e"/>
+<text x="182.0" y="190.0" text-anchor="end" textLength="156.0" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">scanl (⊛) (c, false)</tspan></text>
+<text x="192.0" y="106.0" text-anchor="middle" textLength="187.2" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#2a78d6">[</tspan><tspan fill="#0b0b0b">(0, 1)</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">(0, 0)</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">(1, 0)</tspan><tspan fill="#2a78d6">]</tspan></text>
+<text x="356.8" y="190.0" text-anchor="middle" textLength="249.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#2a78d6">[</tspan><tspan fill="#0b0b0b">(1, 0)</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">(0, 1)</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">(0, 0)</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">(1, 0)</tspan><tspan fill="#2a78d6">]</tspan></text>
+<text x="192.0" y="274.0" text-anchor="middle" textLength="249.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#2a78d6">[</tspan><tspan fill="#0b0b0b">(1, 0)</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">(1, 0)</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">(0, 0)</tspan><tspan fill="#2a78d6">, </tspan><tspan fill="#0b0b0b">(1, 0)</tspan><tspan fill="#2a78d6">]</tspan></text>
+<rect x="24.0" y="312.0" width="109.8" height="36.0" rx="4" fill="#f0efec" stroke="#e1e0d9"/>
+<text x="36.0" y="334.0" text-anchor="start" textLength="85.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">where </tspan><tspan fill="#0b0b0b">c = 1</tspan></text>
+</g>
+</svg>

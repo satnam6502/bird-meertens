@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="610.4" height="272.0" viewBox="0 0 610.4 272.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img" aria-labelledby="title desc">
+<title id="title">The specification: the whole message at once</title>
+<desc id="desc">The specification: the whole message at once. The circuit of the line (· %ₘ g) ∘ (· * X⁸) ∘ msgPoly. The label on each wire counts the coefficients it carries. Nothing is computed until the whole message has arrived.</desc>
+<rect width="100%" height="100%" fill="#1a1a19"/>
+<text x="24.0" y="36" font-size="16" font-weight="600" fill="#ffffff">The specification: the whole message at once</text>
+<g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13">
+<text x="24.0" y="60.0" text-anchor="start" textLength="226.2" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">(· %ₘ g) ∘ (· * X⁸) ∘ msgPoly</tspan></text>
+<polyline points="39.8,140.0 110.6,140.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polygon points="110.6,140.0 102.6,136.5 102.6,143.5" fill="#c3c2b7"/>
+<text x="75.2" y="131.0" text-anchor="middle" textLength="46.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">n bits</tspan></text>
+<polyline points="185.2,140.0 318.4,140.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polygon points="318.4,140.0 310.4,136.5 310.4,143.5" fill="#c3c2b7"/>
+<text x="251.8" y="131.0" text-anchor="middle" textLength="109.2" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">n coefficients</tspan></text>
+<polyline points="385.2,140.0 448.2,140.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polygon points="448.2,140.0 440.2,136.5 440.2,143.5" fill="#c3c2b7"/>
+<text x="416.7" y="131.0" text-anchor="middle" textLength="39.0" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">n + 8</tspan></text>
+<polyline points="515.0,140.0 559.0,140.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polygon points="559.0,140.0 551.0,136.5 551.0,143.5" fill="#c3c2b7"/>
+<text x="537.0" y="131.0" text-anchor="middle" textLength="7.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">8</tspan></text>
+<text x="33.9" y="144.5" text-anchor="middle" textLength="7.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">M</tspan></text>
+<rect x="110.6" y="126.0" width="74.6" height="28.0" rx="3" fill="#1a1a19" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="147.9" y="144.5" text-anchor="middle" textLength="54.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">msgPoly</tspan></text>
+<rect x="318.4" y="126.0" width="66.8" height="28.0" rx="3" fill="#1a1a19" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="351.8" y="144.5" text-anchor="middle" textLength="46.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">· * X⁸</tspan></text>
+<rect x="448.2" y="126.0" width="66.8" height="28.0" rx="3" fill="#1a1a19" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="481.6" y="144.5" text-anchor="middle" textLength="46.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">· %ₘ g</tspan></text>
+<text x="572.7" y="144.5" text-anchor="middle" textLength="23.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">CRC</tspan></text>
+<rect x="24.0" y="192.0" width="562.4" height="56.0" rx="4" fill="#252524" stroke="#383835"/>
+<text x="36.0" y="214.0" text-anchor="start" textLength="452.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">The label on each wire counts the coefficients it carries.</tspan></text>
+<text x="36.0" y="234.0" text-anchor="start" textLength="436.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">Nothing is computed until the whole message has arrived.</tspan></text>
+</g>
+</svg>

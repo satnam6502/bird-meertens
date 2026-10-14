@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="733.8" height="720.0" viewBox="0 0 733.8 720.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img" aria-labelledby="title desc">
+<title id="title">A scan of (g, p) pairs</title>
+<desc id="desc">A scan of (g, p) pairs: the circuit of the line adder (map fst ∘ scanl (⊛) (c, false) ∘ map gp), for 7 columns. Its carry chain is 7 levels deep.</desc>
+<rect width="100%" height="100%" fill="#1a1a19"/>
+<text x="24.0" y="36" font-size="16" font-weight="600" fill="#ffffff">A scan of (g, p) pairs</text>
+<g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13">
+<text x="24.0" y="60.0" text-anchor="start" textLength="366.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">adder (map fst ∘ scanl (⊛) (c, false) ∘ map gp)</tspan></text>
+<polyline points="148.0,106.0 148.0,486.0 131.0,495.0" fill="none" stroke="#c3c2b7" stroke-width="1.25" stroke-dasharray="3 3" stroke-opacity="0.7"/>
+<polyline points="60.0,106.0 60.0,458.0 124.0,502.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="212.0,106.0 212.0,486.0 195.0,495.0" fill="none" stroke="#c3c2b7" stroke-width="1.25" stroke-dasharray="3 3" stroke-opacity="0.7"/>
+<polyline points="124.0,194.0 124.0,458.0 188.0,502.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="60.0,106.0 60.0,150.0 124.0,194.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="124.0,150.0 124.0,194.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="124.0,106.0 124.0,150.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="276.0,106.0 276.0,486.0 259.0,495.0" fill="none" stroke="#c3c2b7" stroke-width="1.25" stroke-dasharray="3 3" stroke-opacity="0.7"/>
+<polyline points="188.0,238.0 188.0,458.0 252.0,502.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="124.0,194.0 124.0,194.0 188.0,238.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="188.0,150.0 188.0,238.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="188.0,106.0 188.0,150.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="340.0,106.0 340.0,486.0 323.0,495.0" fill="none" stroke="#c3c2b7" stroke-width="1.25" stroke-dasharray="3 3" stroke-opacity="0.7"/>
+<polyline points="252.0,282.0 252.0,458.0 316.0,502.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="188.0,238.0 188.0,238.0 252.0,282.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="252.0,150.0 252.0,282.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="252.0,106.0 252.0,150.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="404.0,106.0 404.0,486.0 387.0,495.0" fill="none" stroke="#c3c2b7" stroke-width="1.25" stroke-dasharray="3 3" stroke-opacity="0.7"/>
+<polyline points="316.0,326.0 316.0,458.0 380.0,502.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="252.0,282.0 252.0,282.0 316.0,326.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="316.0,150.0 316.0,326.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="316.0,106.0 316.0,150.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="468.0,106.0 468.0,486.0 451.0,495.0" fill="none" stroke="#c3c2b7" stroke-width="1.25" stroke-dasharray="3 3" stroke-opacity="0.7"/>
+<polyline points="380.0,370.0 380.0,458.0 444.0,502.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="316.0,326.0 316.0,326.0 380.0,370.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="380.0,150.0 380.0,370.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="380.0,106.0 380.0,150.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="532.0,106.0 532.0,486.0 515.0,495.0" fill="none" stroke="#c3c2b7" stroke-width="1.25" stroke-dasharray="3 3" stroke-opacity="0.7"/>
+<polyline points="444.0,414.0 444.0,458.0 508.0,502.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="380.0,370.0 380.0,370.0 444.0,414.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="444.0,150.0 444.0,414.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="444.0,106.0 444.0,150.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="444.0,414.0 444.0,414.0 508.0,458.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="508.0,150.0 508.0,458.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="508.0,106.0 508.0,150.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="124.0,502.0 124.0,542.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="188.0,502.0 188.0,542.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="252.0,502.0 252.0,542.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="316.0,502.0 316.0,542.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="380.0,502.0 380.0,542.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="444.0,502.0 444.0,542.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="508.0,502.0 508.0,542.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<polyline points="508.0,458.0 572.0,502.0 572.0,542.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<circle cx="124.0" cy="502.0" r="9" fill="#1a1a19" stroke="#c3c2b7" stroke-width="1.5"/>
+<path d="M 115.0 502.0 H 133.0 M 124.0 493.0 V 511.0" stroke="#c3c2b7" stroke-width="1.5"/>
+<circle cx="188.0" cy="502.0" r="9" fill="#1a1a19" stroke="#c3c2b7" stroke-width="1.5"/>
+<path d="M 179.0 502.0 H 197.0 M 188.0 493.0 V 511.0" stroke="#c3c2b7" stroke-width="1.5"/>
+<circle cx="124.0" cy="194.0" r="4.5" fill="#ffffff"/>
+<rect x="108.0" y="140.0" width="32" height="20" rx="3" fill="#1a1a19" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="124.0" y="154.5" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">gp</tspan></text>
+<circle cx="252.0" cy="502.0" r="9" fill="#1a1a19" stroke="#c3c2b7" stroke-width="1.5"/>
+<path d="M 243.0 502.0 H 261.0 M 252.0 493.0 V 511.0" stroke="#c3c2b7" stroke-width="1.5"/>
+<circle cx="188.0" cy="238.0" r="4.5" fill="#ffffff"/>
+<rect x="172.0" y="140.0" width="32" height="20" rx="3" fill="#1a1a19" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="188.0" y="154.5" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">gp</tspan></text>
+<circle cx="316.0" cy="502.0" r="9" fill="#1a1a19" stroke="#c3c2b7" stroke-width="1.5"/>
+<path d="M 307.0 502.0 H 325.0 M 316.0 493.0 V 511.0" stroke="#c3c2b7" stroke-width="1.5"/>
+<circle cx="252.0" cy="282.0" r="4.5" fill="#ffffff"/>
+<rect x="236.0" y="140.0" width="32" height="20" rx="3" fill="#1a1a19" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="252.0" y="154.5" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">gp</tspan></text>
+<circle cx="380.0" cy="502.0" r="9" fill="#1a1a19" stroke="#c3c2b7" stroke-width="1.5"/>
+<path d="M 371.0 502.0 H 389.0 M 380.0 493.0 V 511.0" stroke="#c3c2b7" stroke-width="1.5"/>
+<circle cx="316.0" cy="326.0" r="4.5" fill="#ffffff"/>
+<rect x="300.0" y="140.0" width="32" height="20" rx="3" fill="#1a1a19" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="316.0" y="154.5" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">gp</tspan></text>
+<circle cx="444.0" cy="502.0" r="9" fill="#1a1a19" stroke="#c3c2b7" stroke-width="1.5"/>
+<path d="M 435.0 502.0 H 453.0 M 444.0 493.0 V 511.0" stroke="#c3c2b7" stroke-width="1.5"/>
+<circle cx="380.0" cy="370.0" r="4.5" fill="#ffffff"/>
+<rect x="364.0" y="140.0" width="32" height="20" rx="3" fill="#1a1a19" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="380.0" y="154.5" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">gp</tspan></text>
+<circle cx="508.0" cy="502.0" r="9" fill="#1a1a19" stroke="#c3c2b7" stroke-width="1.5"/>
+<path d="M 499.0 502.0 H 517.0 M 508.0 493.0 V 511.0" stroke="#c3c2b7" stroke-width="1.5"/>
+<circle cx="444.0" cy="414.0" r="4.5" fill="#ffffff"/>
+<rect x="428.0" y="140.0" width="32" height="20" rx="3" fill="#1a1a19" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="444.0" y="154.5" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">gp</tspan></text>
+<circle cx="508.0" cy="458.0" r="4.5" fill="#ffffff"/>
+<rect x="492.0" y="140.0" width="32" height="20" rx="3" fill="#1a1a19" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="508.0" y="154.5" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">gp</tspan></text>
+<text x="60.0" y="96.0" text-anchor="middle" textLength="78.0" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">(c, false)</tspan></text>
+<text x="124.0" y="96.0" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">x₀</tspan></text>
+<text x="188.0" y="96.0" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">x₁</tspan></text>
+<text x="252.0" y="96.0" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">x₂</tspan></text>
+<text x="316.0" y="96.0" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">x₃</tspan></text>
+<text x="380.0" y="96.0" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">x₄</tspan></text>
+<text x="444.0" y="96.0" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">x₅</tspan></text>
+<text x="508.0" y="96.0" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">x₆</tspan></text>
+<text x="124.0" y="556.0" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">s₀</tspan></text>
+<text x="188.0" y="556.0" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">s₁</tspan></text>
+<text x="252.0" y="556.0" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">s₂</tspan></text>
+<text x="316.0" y="556.0" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">s₃</tspan></text>
+<text x="380.0" y="556.0" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">s₄</tspan></text>
+<text x="444.0" y="556.0" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">s₅</tspan></text>
+<text x="508.0" y="556.0" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">s₆</tspan></text>
+<text x="572.0" y="556.0" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">s₇</tspan></text>
+<text x="622.0" y="323.0" text-anchor="start" textLength="85.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">carry chain</tspan></text>
+<text x="622.0" y="341.0" text-anchor="start" textLength="62.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">7 levels</tspan></text>
+<path d="M 607.0 186.0 H 612.0 V 466.0 H 607.0" fill="none" stroke="#c3c2b7" stroke-width="1.25"/>
+<rect x="24.0" y="584.0" width="685.8" height="112.0" rx="4" fill="#252524" stroke="#383835"/>
+<text x="72.0" y="608.5" text-anchor="start" textLength="468.0" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">xᵢ = (aᵢ, bᵢ) is column i of the operands; c is the carry in</tspan></text>
+<rect x="32.0" y="618.0" width="32" height="20" rx="3" fill="#1a1a19" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="48.0" y="632.5" text-anchor="middle" textLength="15.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">gp</tspan></text>
+<text x="72.0" y="632.5" text-anchor="start" textLength="202.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">gp (a, b) = (a ∧ b, a ⊕ b)</tspan></text>
+<circle cx="48.0" cy="652.0" r="4.5" fill="#ffffff"/>
+<text x="72.0" y="656.5" text-anchor="start" textLength="491.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">(g₁, p₁) ⊛ (g₂, p₂) = (g₂ ∨ (p₂ ∧ g₁), p₁ ∧ p₂); a carry is a g</tspan></text>
+<circle cx="48.0" cy="676.0" r="9" fill="#1a1a19" stroke="#c3c2b7" stroke-width="1.5"/>
+<path d="M 39.0 676.0 H 57.0 M 48.0 667.0 V 685.0" stroke="#c3c2b7" stroke-width="1.5"/>
+<text x="72.0" y="680.5" text-anchor="start" textLength="382.2" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">sᵢ = aᵢ ⊕ bᵢ ⊕ cᵢ; the dashed wire brings xᵢ down</tspan></text>
+</g>
+</svg>

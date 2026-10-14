@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="703.8" height="374.0" viewBox="0 0 703.8 374.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img" aria-labelledby="title desc">
+<title id="title">Sarwate's table: one lookup a byte</title>
+<desc id="desc">Sarwate's table: one lookup a byte. The circuit of the line toPoly ∘ foldl (tableStep (table 0x1021)) 0. table i = byteStep 0x1021 0 i, computed once: 256 entries of 16 bits. Reduction modulo g is linear, which is why one lookup can stand for eight clocks.</desc>
+<rect width="100%" height="100%" fill="#fcfcfb"/>
+<text x="24.0" y="36" font-size="16" font-weight="600" fill="#0b0b0b">Sarwate's table: one lookup a byte</text>
+<g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13">
+<text x="24.0" y="60.0" text-anchor="start" textLength="335.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">toPoly ∘ foldl (tableStep (table 0x1021)) 0</tspan></text>
+<polyline points="101.3,178.0 123.3,178.0" fill="none" stroke="#52514e" stroke-width="1.25"/>
+<polyline points="123.3,178.0 123.3,140.0 176.7,140.0" fill="none" stroke="#52514e" stroke-width="1.25"/>
+<polygon points="176.7,140.0 168.7,136.5 168.7,143.5" fill="#52514e"/>
+<circle cx="123.3" cy="178.0" r="3" fill="#52514e"/>
+<polyline points="123.3,178.0 123.3,216.0 184.5,216.0" fill="none" stroke="#52514e" stroke-width="1.25"/>
+<polygon points="184.5,216.0 176.5,212.5 176.5,219.5" fill="#52514e"/>
+<circle cx="123.3" cy="178.0" r="3" fill="#52514e"/>
+<polyline points="243.5,216.0 345.0,216.0" fill="none" stroke="#52514e" stroke-width="1.25"/>
+<polygon points="345.0,216.0 337.0,212.5 337.0,219.5" fill="#52514e"/>
+<text x="294.3" y="207.0" text-anchor="middle" textLength="62.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">top byte</tspan></text>
+<polyline points="354.0,253.0 354.0,225.0" fill="none" stroke="#52514e" stroke-width="1.25"/>
+<polygon points="354.0,225.0 350.5,233.0 357.5,233.0" fill="#52514e"/>
+<polyline points="363.0,216.0 437.2,216.0" fill="none" stroke="#52514e" stroke-width="1.25"/>
+<polygon points="437.2,216.0 429.2,212.5 429.2,219.5" fill="#52514e"/>
+<text x="400.1" y="207.0" text-anchor="middle" textLength="39.0" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">index</tspan></text>
+<polyline points="251.3,140.0 615.0,140.0" fill="none" stroke="#52514e" stroke-width="1.25"/>
+<polygon points="615.0,140.0 607.0,136.5 607.0,143.5" fill="#52514e"/>
+<polyline points="550.8,216.0 624.0,216.0 624.0,149.0" fill="none" stroke="#52514e" stroke-width="1.25"/>
+<polygon points="624.0,149.0 620.5,157.0 627.5,157.0" fill="#52514e"/>
+<polyline points="633.0,140.0 648.0,140.0 648.0,104.0 64.0,104.0 64.0,155.0" fill="none" stroke="#52514e" stroke-width="1.25"/>
+<polygon points="64.0,155.0 67.5,147.0 60.5,147.0" fill="#52514e"/>
+<rect x="26.7" y="155.0" width="74.6" height="46.0" rx="1" fill="#fcfcfb" stroke="#0b0b0b" stroke-width="2"/>
+<path d="M 58.0 201.0 L 64.0 195.0 L 70.0 201.0" fill="none" stroke="#0b0b0b" stroke-width="1.25"/>
+<text x="64.0" y="173.5" text-anchor="middle" textLength="7.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#0b0b0b">r</tspan></text>
+<text x="64.0" y="191.5" text-anchor="middle" textLength="54.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#0b0b0b">16 bits</tspan></text>
+<rect x="176.7" y="126.0" width="74.6" height="28.0" rx="3" fill="#fcfcfb" stroke="#52514e" stroke-width="1.5"/>
+<text x="214.0" y="144.5" text-anchor="middle" textLength="54.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#0b0b0b">r &lt;&lt;&lt; 8</tspan></text>
+<rect x="184.5" y="202.0" width="59.0" height="28.0" rx="3" fill="#fcfcfb" stroke="#52514e" stroke-width="1.5"/>
+<text x="214.0" y="220.5" text-anchor="middle" textLength="39.0" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#0b0b0b">r₁₅…₈</tspan></text>
+<circle cx="354.0" cy="216.0" r="9" fill="#fcfcfb" stroke="#52514e" stroke-width="1.5"/>
+<path d="M 345.0 216.0 H 363.0 M 354.0 207.0 V 225.0" stroke="#52514e" stroke-width="1.5"/>
+<text x="354.0" y="266.5" text-anchor="middle" textLength="7.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#0b0b0b">x</tspan></text>
+<rect x="437.2" y="193.0" width="113.6" height="46.0" rx="3" fill="#fcfcfb" stroke="#52514e" stroke-width="1.5"/>
+<text x="494.0" y="211.5" text-anchor="middle" textLength="93.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#0b0b0b">table 0x1021</tspan></text>
+<text x="494.0" y="229.5" text-anchor="middle" textLength="85.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#0b0b0b">256 entries</tspan></text>
+<circle cx="624.0" cy="140.0" r="9" fill="#fcfcfb" stroke="#52514e" stroke-width="1.5"/>
+<path d="M 615.0 140.0 H 633.0 M 624.0 131.0 V 149.0" stroke="#52514e" stroke-width="1.5"/>
+<rect x="24.0" y="294.0" width="655.8" height="56.0" rx="4" fill="#f0efec" stroke="#e1e0d9"/>
+<text x="36.0" y="316.0" text-anchor="start" textLength="538.2" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">table i = byteStep 0x1021 0 i, computed once: 256 entries of 16 bits.</tspan></text>
+<text x="36.0" y="336.0" text-anchor="start" textLength="631.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#52514e">Reduction modulo g is linear, which is why one lookup can stand for eight clocks.</tspan></text>
+</g>
+</svg>

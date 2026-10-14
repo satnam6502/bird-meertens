@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="641.4" height="392.0" viewBox="0 0 641.4 392.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img" aria-labelledby="title desc">
+<title id="title">Data refinement: foldl (hornerMod g 8) 0 = toPoly ∘ foldl (lfsrStep 0x07) 0</title>
+<desc id="desc">Data refinement: foldl (hornerMod g 8) 0 = toPoly ∘ foldl (lfsrStep 0x07) 0. Starting from [1, 0, 1, 1], the line before the step: foldl (hornerMod g 8) 0 gives X⁵ + X⁴ + 1. The line after: foldl (lfsrStep 0x07) 0 gives 00110001, then toPoly gives X⁵ + X⁴ + 1.</desc>
+<rect width="100%" height="100%" fill="#1a1a19"/>
+<text x="24.0" y="36" font-size="16" font-weight="600" fill="#ffffff">Data refinement</text>
+<g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13">
+<text x="24.0" y="60.0" text-anchor="start" textLength="452.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">foldl (hornerMod g 8) 0 = toPoly ∘ foldl (lfsrStep 0x07) 0</tspan></text>
+<line x1="320.0" y1="114.0" x2="419.0" y2="170.1" stroke="#c3c2b7" stroke-width="1.5"/>
+<polygon points="426.0,174.0 419.5,165.2 415.1,173.0" fill="#c3c2b7"/>
+<text x="377.9" y="134.1" text-anchor="start" textLength="179.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">foldl (lfsrStep 0x07) 0</tspan></text>
+<line x1="426.0" y1="198.0" x2="308.4" y2="254.5" stroke="#c3c2b7" stroke-width="1.5"/>
+<polygon points="301.2,258.0 312.2,257.7 308.3,249.6" fill="#c3c2b7"/>
+<text x="367.9" y="246.4" text-anchor="start" textLength="46.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">toPoly</tspan></text>
+<line x1="285.2" y1="114.0" x2="285.2" y2="250.0" stroke="#c3c2b7" stroke-width="1.5"/>
+<polygon points="285.2,258.0 289.7,248.0 280.7,248.0" fill="#c3c2b7"/>
+<text x="275.2" y="190.0" text-anchor="end" textLength="179.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">foldl (hornerMod g 8) 0</tspan></text>
+<text x="285.2" y="106.0" text-anchor="middle" textLength="93.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#3987e5">[</tspan><tspan fill="#ffffff">1</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">0</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">1</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">1</tspan><tspan fill="#3987e5">]</tspan></text>
+<text x="445.2" y="190.0" text-anchor="middle" textLength="62.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">00110001</tspan></text>
+<text x="285.2" y="274.0" text-anchor="middle" textLength="85.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">X⁵ + X⁴ + 1</tspan></text>
+<rect x="24.0" y="312.0" width="593.4" height="56.0" rx="4" fill="#252524" stroke="#383835"/>
+<text x="36.0" y="334.0" text-anchor="start" textLength="569.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">where </tspan><tspan fill="#ffffff">lfsrStep poly r b = if msb r ⊕ b then (r &lt;&lt;&lt; 1) ⊕ poly else r &lt;&lt;&lt; 1</tspan></text>
+<text x="36.0" y="354.0" text-anchor="start" textLength="569.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">  and </tspan><tspan fill="#ffffff">toPoly r = Σ rᵢ·Xⁱ, so bit 7, on the left, is the coefficient of X⁷</tspan></text>
+</g>
+</svg>
