@@ -21,23 +21,24 @@ jobs:
         uses: leanprover/lean-action@f061402b660e0c34644504b324e830f2991d4865 # v1.6.1
         with:
           use-mathlib-cache: "true"
-          build-args: Kadane kadane_bench Adder adder_diagrams adder_netlist CRC crc_diagrams Sorters
+          build-args: Kadane kadane_bench kadane_diagrams Adder adder_diagrams adder_netlist CRC crc_diagrams Sorters
 
       # The diagrams and the netlist are generated. Regenerate them, check that
       # they match the committed files, and check that each README shows every
       # diagram, light and dark, and no diagram that is missing.
       - name: Check that the generated files are up to date
         run: |
+          lake exe kadane_diagrams
           lake exe adder_diagrams
           lake exe crc_diagrams
           lake exe adder_netlist 32
-          git add --intent-to-add -- Adder CRC
-          git diff --exit-code -- Adder CRC || {
-            echo "::error::Generated files are stale. Run 'lake exe adder_diagrams', 'lake exe crc_diagrams' and 'lake exe adder_netlist 32' with the toolchain in lean-toolchain, and commit the result."
+          git add --intent-to-add -- kadane/diagrams Adder CRC
+          git diff --exit-code -- kadane/diagrams Adder CRC || {
+            echo "::error::Generated files are stale. Run 'lake exe kadane_diagrams', 'lake exe adder_diagrams', 'lake exe crc_diagrams' and 'lake exe adder_netlist 32' with the toolchain in lean-toolchain, and commit the result."
             exit 1
           }
-          python3 -c 'import sys, xml.etree.ElementTree as E; [E.parse(f) for f in sys.argv[1:]]' Adder/diagrams/*.svg CRC/diagrams/*.svg
-          for d in Adder CRC; do
+          python3 -c 'import sys, xml.etree.ElementTree as E; [E.parse(f) for f in sys.argv[1:]]' kadane/diagrams/*.svg Adder/diagrams/*.svg CRC/diagrams/*.svg
+          for d in kadane Adder CRC; do
             for f in "$d"/diagrams/*.svg; do
               n=$(basename "$f" .svg); n=${n%_light}; n=${n%_dark}
               grep -qF "src=\"diagrams/${n}_light.svg\"" "$d/README.md" &&

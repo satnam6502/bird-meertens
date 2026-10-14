@@ -62,6 +62,101 @@ A few details that matter in the Lean version:
 - The laws used in the middle of the pipeline carry a trailing `∘ g` so that
   `rw` can find them inside a longer composition.
 
+## Each Step, on an Example
+
+The [Wikipedia article](https://en.wikipedia.org/wiki/Bird%E2%80%93Meertens_formalism)
+draws an example instance of each law. The diagrams below do the same for
+every step of `mss_eq_kadane`, on the list `[3, −4, 2]`. Each applies its law
+where the derivation applies it. The left path is the line before the step,
+and the right path is the line after it. Both end at the same value. Steps are
+numbered as in the table of running times, where step 1 is the specification.
+
+Bracket colour shows depth. Blue brackets hold numbers, orange brackets hold
+lists of numbers, and green brackets hold lists of those.
+
+[`diagrams/KadaneDiagrams.lean`](diagrams/KadaneDiagrams.lean) draws them. It
+computes every value with the definitions in `Kadane.lean`. It fails if the
+two paths of a diagram end at different values, or if two pieces of text
+overlap. CI redraws the diagrams and checks that they match the committed
+files.
+
+```bash
+lake exe kadane_diagrams     # redraws the Kadane SVGs in kadane/diagrams
+```
+
+### 2. Definition of `segs`
+
+A segment is a suffix of a prefix. The empty segment is a suffix of every
+prefix, so it appears four times.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="diagrams/segs_dark.svg">
+  <img alt="Commuting diagram. From [3, −4, 2], segs gives the ten segments in one step. inits, map tails and concat give the same list in three." src="diagrams/segs_light.svg">
+</picture>
+
+### 3. Map promotion
+
+`map sum` moves inside `concat`. Each prefix's suffixes are summed as a group.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="diagrams/map_promotion_dark.svg">
+  <img alt="Commuting diagram. From the suffixes of each prefix, concat then map sum, and map (map sum) then concat, both give [0, 3, 0, −1, −4, 0, 1, −2, 2, 0]." src="diagrams/map_promotion_light.svg">
+</picture>
+
+### 4. Fold promotion
+
+The largest of all the sums is the largest of each group's largest.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="diagrams/fold_promotion_dark.svg">
+  <img alt="Commuting diagram. From [[0], [3, 0], [−1, −4, 0], [1, −2, 2, 0]], concat then maxL, and map maxL then maxL, both give 3." src="diagrams/fold_promotion_light.svg">
+</picture>
+
+### 5. Map distributivity
+
+Three passes over the prefixes become one. `[0, 3, 0, 2]` holds the largest
+suffix sum of each prefix. It comes back in steps 7 and 8.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="diagrams/map_distrib_dark.svg">
+  <img alt="Commuting diagram. From the prefixes of [3, −4, 2], map tails, map (map sum) and map maxL give [0, 3, 0, 2]. One map of the composite gives the same list." src="diagrams/map_distrib_light.svg">
+</picture>
+
+### 6. Horner's rule
+
+The largest suffix sum is a fold from the left. `⊙` drops `3 + −4` to `0`,
+and the suffix starts again. The rule takes its name from polynomials: `+`
+distributes over `max` as `·` distributes over `+`. The diagram shows the last
+prefix. The derivation applies the rule to every prefix, under `map`. The cost
+drops from O(n³) to O(n²).
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="diagrams/horner_dark.svg">
+  <img alt="Commuting diagram. From [3, −4, 2], tails, map sum and maxL give 2. foldl (⊙) 0 gives ((0 ⊙ 3) ⊙ −4) ⊙ 2, which is also 2." src="diagrams/horner_light.svg">
+</picture>
+
+### 7. Scan lemma
+
+The left path folds each prefix from scratch. The right path shares the work:
+each element is one `⊙` on from the one before. Both paths write out the same
+terms, so the lemma holds for any operator. The cost drops from O(n²) to O(n).
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="diagrams/scan_lemma_dark.svg">
+  <img alt="Commuting diagram. From [3, −4, 2], inits then map (foldl (⊙) 0), and scanl (⊙) 0, both give [0, 0 ⊙ 3, (0 ⊙ 3) ⊙ −4, ((0 ⊙ 3) ⊙ −4) ⊙ 2], which is [0, 3, 0, 2]." src="diagrams/scan_lemma_light.svg">
+</picture>
+
+### 8. Fold–scan fusion
+
+The fold carries a pair. Its second component follows the scan, and its first
+keeps the largest so far: `(0, 0)`, `(3, 3)`, `(3, 0)`, `(3, 2)`. So `fst`
+gives what `maxL` gives, and no list is built.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="diagrams/fold_scan_fusion_dark.svg">
+  <img alt="Commuting diagram. From [3, −4, 2], scanl (⊙) 0 then maxL gives 3. foldl (⊗) (0, 0) gives (3, 2), and fst gives 3." src="diagrams/fold_scan_fusion_light.svg">
+</picture>
+
 ## Running Times
 
 The benchmark in [`bench/KadaneBench.lean`](bench/KadaneBench.lean) runs every
@@ -112,9 +207,9 @@ least-squares fit of `log t` against `log n`, using only calls of 100 µs or
 more.
 
 These numbers come from a single run on a 2.60 GHz Intel Xeon (a GCP VM) with
-Lean 4.28.0. Your absolute times will be different on another machine, but the
-slopes should hardly change. To run it yourself, from the root of the
-repository:
+Lean 4.28.0, before the move to Lean 4.34.1. Your absolute times will be
+different on another machine, but the slopes should hardly change. To run it
+yourself, from the root of the repository:
 
 ```bash
 lake exe kadane_bench        # takes about 40 seconds
@@ -146,4 +241,5 @@ the repository.
 ```bash
 lake build Kadane            # checks the derivation
 lake exe kadane_bench        # the timings and plots
+lake exe kadane_diagrams     # the diagram of each step
 ```

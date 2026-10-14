@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="484.5" height="419.0" viewBox="0 0 484.5 419.0" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" role="img" aria-labelledby="title desc">
+<title id="title">Fold–scan fusion: maxL ∘ scanl (⊙) 0 = fst ∘ foldl (⊗) (0, 0)</title>
+<desc id="desc">Fold–scan fusion: maxL ∘ scanl (⊙) 0 = fst ∘ foldl (⊗) (0, 0). Starting from [3, −4, 2], the line before the step: scanl (⊙) 0 gives [0, 3, 0, 2], then maxL gives 3. The line after: foldl (⊗) (0, 0) gives (((0, 0) ⊗ 3) ⊗ −4) ⊗ 2 = (3, 2), then fst gives 3.</desc>
+<rect width="100%" height="100%" fill="#1a1a19"/>
+<text x="24.0" y="36" font-size="16" font-weight="600" fill="#ffffff">Fold–scan fusion</text>
+<g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13">
+<text x="24.0" y="60.0" text-anchor="start" textLength="335.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">maxL ∘ scanl (⊙) 0 = fst ∘ foldl (⊗) (0, 0)</tspan></text>
+<line x1="204.8" y1="114.0" x2="78.0" y2="174.1" stroke="#c3c2b7" stroke-width="1.5"/>
+<polygon points="70.8,177.5 81.8,177.3 77.9,169.2" fill="#c3c2b7"/>
+<text x="133.5" y="135.3" text-anchor="end" textLength="85.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">scanl (⊙) 0</tspan></text>
+<line x1="236.8" y1="114.0" x2="363.6" y2="174.1" stroke="#c3c2b7" stroke-width="1.5"/>
+<polygon points="370.8,177.5 363.7,169.2 359.8,177.3" fill="#c3c2b7"/>
+<text x="308.1" y="135.3" text-anchor="start" textLength="124.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">foldl (⊗) (0, 0)</tspan></text>
+<line x1="70.8" y1="201.5" x2="203.9" y2="280.9" stroke="#c3c2b7" stroke-width="1.5"/>
+<polygon points="210.8,285.0 204.5,276.0 199.9,283.7" fill="#c3c2b7"/>
+<text x="135.7" y="261.0" text-anchor="end" textLength="31.2" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">maxL</tspan></text>
+<line x1="370.8" y1="221.5" x2="238.1" y2="281.7" stroke="#c3c2b7" stroke-width="1.5"/>
+<polygon points="230.8,285.0 241.8,285.0 238.0,276.8" fill="#c3c2b7"/>
+<text x="304.9" y="271.8" text-anchor="start" textLength="23.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">fst</tspan></text>
+<text x="220.8" y="106.0" text-anchor="middle" textLength="78.0" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#3987e5">[</tspan><tspan fill="#ffffff">3</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">−4</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">2</tspan><tspan fill="#3987e5">]</tspan></text>
+<text x="70.8" y="193.5" text-anchor="middle" textLength="93.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#3987e5">[</tspan><tspan fill="#ffffff">0</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">3</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">0</tspan><tspan fill="#3987e5">, </tspan><tspan fill="#ffffff">2</tspan><tspan fill="#3987e5">]</tspan></text>
+<text x="370.8" y="193.5" text-anchor="middle" textLength="179.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">(((0, 0) ⊗ 3) ⊗ −4) ⊗ 2</tspan></text>
+<text x="370.8" y="213.5" text-anchor="middle" textLength="62.4" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">= </tspan><tspan fill="#ffffff">(3, 2)</tspan></text>
+<text x="220.8" y="301.0" text-anchor="middle" textLength="7.8" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#ffffff">3</tspan></text>
+<rect x="24.0" y="339.0" width="390.6" height="56.0" rx="4" fill="#252524" stroke="#383835"/>
+<text x="36.0" y="361.0" text-anchor="start" textLength="210.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">where </tspan><tspan fill="#ffffff">a ⊙ b = max (a + b) 0</tspan></text>
+<text x="36.0" y="381.0" text-anchor="start" textLength="366.6" lengthAdjust="spacing" xml:space="preserve"><tspan fill="#c3c2b7">  and </tspan><tspan fill="#ffffff">(u, v) ⊗ x = (max u w, w), with w = v ⊙ x</tspan></text>
+</g>
+</svg>

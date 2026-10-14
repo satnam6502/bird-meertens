@@ -1,12 +1,13 @@
 /-!
 # Diagrams of laws, in the style of the Wikipedia article on Bird–Meertens
 
-The drawing code shared by `adder_diagrams` and `crc_diagrams`. A `Law` is
-one step of a derivation, applied to an example: a start value, and two paths
-from it, the line before the step and the line after it. `Law.drawing` lays a
-law out and checks it. Both paths must end at the same value, as drawn, and no
-text may overlap other text, leave the page or lie under a line. `writeAll`
-writes the light and dark SVGs, but only if every drawing passes.
+The drawing code shared by `kadane_diagrams`, `adder_diagrams` and
+`crc_diagrams`. A `Law` is one step of a derivation, applied to an example: a
+start value, and two paths from it, the line before the step and the line
+after it. `Law.drawing` lays a law out and checks it. Both paths must end at
+the same value, as drawn, and no text may overlap other text, leave the page
+or lie under a line. `writeAll` writes the light and dark SVGs, but only if
+every drawing passes.
 -/
 
 namespace LawDiagrams
