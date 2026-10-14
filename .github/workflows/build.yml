@@ -48,3 +48,10 @@ jobs:
               test -f "$d/$f" || { echo "::error::$d/README.md shows a missing $d/$f"; exit 1; }
             done
           done
+
+      # Only the Verilog printer is unverified. Lint what it printed, and prove
+      # with a SAT solver that the adder equals + for every input.
+      - name: Check the adder's Verilog
+        run: |
+          sudo apt-get update && sudo apt-get install -y verilator yosys
+          make -C Adder/netlist lint equiv OSS_YOSYS=yosys

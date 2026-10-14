@@ -113,6 +113,9 @@ def main (args : List String) : IO UInt32 := do
   if n == 0 then
     IO.eprintln "the width must be positive"
     return 1
+  unless ← System.FilePath.pathExists "Adder/README.md" do
+    IO.eprintln "Run adder_netlist from the root of the repository."
+    return 1
   IO.FS.createDirAll "Adder/netlist"
   IO.FS.writeFile s!"Adder/netlist/sklansky_adder_{n}.v" (adderVerilog n)
   IO.FS.writeFile s!"Adder/netlist/sklansky_adder_{n}_check.v" (checkVerilog n)
