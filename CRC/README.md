@@ -236,23 +236,6 @@ up a byte.
   gives a series of equivalent algorithms, from code close to the mathematics
   to bytewise tables.
 
-## Why the CRC suits a talk
-
-- Every hardware engineer knows the spec. It fits on one line.
-- One law, fold fusion, does three jobs: a shift, a reduction, a change of representation.
-- Bits meet polynomials in one lemma, `toPoly_lfsrStep`. It covers one clock. Fusion does the induction.
-- The derivation ends at RTL in this repo, and at published check values.
-- It is small. `CRC.lean` is about 400 lines, with 38 theorems.
-
-A possible running order for slides:
-
-1. The spec: `(M·Xᵏ) mod g`.
-2. Horner's rule. Now a loop, but its state grows with the message.
-3. Two fusions. The state is now bounded by `k`, but still a polynomial.
-4. Data refinement to a `k`-bit register. The one-clock lemma.
-5. Bytes. Two list laws, then Sarwate's table from linearity.
-6. The payoff. `crc8.sv` is that LFSR, and the check values are theorems.
-
 ## Trust
 
 | Theorems | Axioms |

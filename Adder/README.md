@@ -208,14 +208,6 @@ from 7 levels to 3.
 
 `cla c` is the name of the circuit above, so the last step changes nothing.
 
-## Why the adder suits a talk
-
-- The spec is the definition of a carry. It assumes nothing about circuits.
-- The derivation reuses two laws from the other examples: the scan lemma and fusion.
-- Associativity is the reason the adder can be parallel. The proof makes that visible.
-- A second calculation turns the textbook row of full adders into Sklansky's adder.
-- One Lean function yields a proof, a depth analysis and a netlist. That is Lava's idea, checked.
-
 ## Related work
 
 The closest work is O'Donnell and Rünger's functional pearl. It too turns a
